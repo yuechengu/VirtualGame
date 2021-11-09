@@ -11,22 +11,19 @@
           <el-menu-item index="mainpage">返回主页</el-menu-item>
 
           <el-submenu index="1">
-            <template slot="title">开始游戏</template>
-
-            <el-menu-item index="start1game"> 单人游戏</el-menu-item>
-            <el-menu-item index="start2game">多人游戏</el-menu-item>
-            <el-menu-item index="2-3" disabled>游戏复盘</el-menu-item>
+            <template slot="title">比赛模块</template>
+            <el-menu-item index="registry">选手注册</el-menu-item>
+            <el-menu-item index="running">开始游戏</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
-            <template slot="title">记录查询</template>
-            <el-menu-item index="searchrunner">选手查询</el-menu-item>
-            <el-menu-item index="searchrace">历史比赛查询</el-menu-item>
+            <template slot="title">查询模块</template>
+            <el-menu-item index="queryGameScore">记录管理</el-menu-item>
           </el-submenu>
 
-          <el-submenu index="3" disabled>
-            <template slot="title">编辑功能</template>
-            <el-menu-item index="3-1">增加选手</el-menu-item>
-            <el-menu-item index="3-2">增加地图</el-menu-item>
+          <el-submenu index="3">
+            <template slot="title">其他功能</template>
+            <el-menu-item index="3-1" disabled>编辑选手</el-menu-item>
+            <el-menu-item index="3-2" disabled>编辑地图</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-header>
@@ -45,17 +42,16 @@ export default {
   name: "App",
 };
 </script>
-
+<!-- css格式 -->
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
-
 .router-link-active {
   text-decoration: none;
 }

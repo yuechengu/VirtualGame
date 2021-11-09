@@ -1,5 +1,5 @@
 <template>
-    <h1>开启一场单人游戏</h1>
+    <h1>选手注销</h1>
 </template>
 
 <script>
