@@ -5,7 +5,7 @@
       <el-form-item label="姓名"><br>
         <el-input v-model="form.name"></el-input>
       </el-form-item>
-      <el-form-item label="性别"><br>
+      <el-form-item label="性别">
         <el-radio-group v-model="form.resource">
           <el-radio label="男"></el-radio>
           <el-radio label="女"></el-radio>
@@ -71,7 +71,7 @@ export default {
   color: #2c3e50;
   float: left;
   position: relative;
-  width: 20%;
-  left: 40%;
+  width: 30%;
+  left: 35%;
 }
 </style>

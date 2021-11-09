@@ -25,8 +25,9 @@
       >
       </el-option>
     </el-select>
-    <br />
-    <br />
+    <br>
+    <br>
+    <br>
     <el-button type="primary" @click="startGame()">开始比赛</el-button>
   </div>
 </template>
