@@ -11,10 +11,15 @@ import Vue from 'vue'
 import App from './App'
 //引用本地@router/index.js
 import router from '@/router/index.js'
+//axios接口引用
+import axios from 'axios'
+// Vue.prototype.$axios=Axios
+//qs引用
+import qs from "qs"
+// Vue.prototype.$qs=qs
 //导入element ui布局系统
 import VueResource from 'vue-resource' 
 import ElementUI from 'element-ui'
-import axios from 'axios'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 Vue.use(VueResource)

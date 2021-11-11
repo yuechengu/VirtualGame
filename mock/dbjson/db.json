@@ -49,16 +49,18 @@
             "addWeight":55
         }
     ],
-    "companies": [
+    "maps": [
         {
-            "id": 1,
-            "name": "apple",
-            "description": "Apple is good"
+            "mapId": 1,
+            "mapName": "go-to-turkey"
         },
         {
-            "id": 2,
-            "name": "amd",
-            "description": "amd yes"
-        }
+            "mapId": 2,
+            "mapName": "go-to-africa"
+        },
+        {
+            "mapId": 3,
+            "mapName": "go-to-shanghai"
+        }    
     ]
 }

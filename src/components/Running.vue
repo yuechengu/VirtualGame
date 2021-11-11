@@ -2,28 +2,23 @@
   <div class="running">
     <h1>请选择运动员和地图</h1>
     <br />
-    <!-- 这里要改key,对应的是每个运动员的id -->
+    <!-- key对应的是每个运动员的id -->
     <el-select v-model="player" multiple placeholder="请选择选手">
       <el-option
         v-for="item in playerOptions"
-        :key="item.name"
+        :key="item.id"
         :label="item.name"
         :value="item.name"
       >
       </el-option>
     </el-select>
 
-    <el-select
-      v-model="map"
-      collapse-tags
-      style="margin-left: 20px"
-      placeholder="请选择地图"
-    >
+    <el-select v-model="map" collapse-tags style="margin-left: 20px" placeholder="请选择地图">
       <el-option
         v-for="item in mapOptions"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
+        :key="item.mapId"
+        :label="item.mapName"
+        :value="item.mapName"
       >
       </el-option>
     </el-select>
@@ -39,16 +34,13 @@ export default {
   data() {
     return {
       playerOptions: [],
-      mapOptions: [
-        { key: "1", label: "图1" },
-        { key: "2", label: "图2" },
-        { key: "3", label: "图3" },
-      ],
+      mapOptions: [],
       player: [],
       map: [],
+      //提交给后台的比赛信息，这里要改
       nextGameForm: {
         playerSelected: [],
-        maySelected: "",
+        maySelected: [],
       },
     };
   },
@@ -57,10 +49,17 @@ export default {
     //加载注册运动员
     fetchRunners() {
       this.$http.get("http://localhost:3000/runners").then(function (response) {
-        console.log("This request is succeed! Here is the response:");
+        console.log("This request is succeed! Here is the response for runners:");
         this.playerOptions = response.body;
       });
     },
+    //加载地图
+    fetchMaps() {
+      this.$http.get("http://localhost:3000/maps").then(function (response) {
+        console.log("This request is succeed! Here is the response for maps:");
+        this.mapOptions = response.body;
+      });
+    },    
     //开始比赛
     startGame() {
       let form = null;
@@ -83,6 +82,7 @@ export default {
   },
   created() {
     this.fetchRunners();
+    this.fetchMaps();
   },
 };
 </script>
