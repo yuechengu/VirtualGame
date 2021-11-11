@@ -1,0 +1,66 @@
+{
+    "runners": [
+        {
+            "id": 1,
+            "name": "王三",
+            "gender": "男",
+            "age": 29,
+            "averageSpeed":45,
+            "addWeight":55
+        },
+        {
+            "id": 2,
+            "name": "王五",
+            "gender": "男",
+            "age": 31,
+            "averageSpeed":45,
+            "addWeight":54
+        },
+        {
+            "id": 3,
+            "name": "李二",
+            "gender": "男",
+            "age": 11,
+            "averageSpeed":45,
+            "addWeight":35
+        },
+        {
+            "id": 4,
+            "name": "赵五",
+            "gender": "女",
+            "age": 99,
+            "averageSpeed":25,
+            "addWeight":50
+        },
+        {
+            "id": 5,
+            "name": "前七",
+            "gender": "女",
+            "age": 29,
+            "averageSpeed":45,
+            "addWeight":55
+        },
+        {
+            "id": 6,
+            "name": "欧三",
+            "gender": "男",
+            "age": 29,
+            "averageSpeed":45,
+            "addWeight":55
+        }
+    ],
+    "maps": [
+        {
+            "mapId": 1,
+            "mapName": "go-to-turkey"
+        },
+        {
+            "mapId": 2,
+            "mapName": "go-to-africa"
+        },
+        {
+            "mapId": 3,
+            "mapName": "go-to-shanghai"
+        }    
+    ]
+}
