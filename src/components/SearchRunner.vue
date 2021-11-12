@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div class="search2">
-      <h1>搜索运动员</h1>
+      <h1>搜索运动员</h1><br>
       <el-input placeholder="请输入姓名"></el-input>
       <el-table :data="runners">
         <el-table-column prop="name" label="姓名"> </el-table-column>
@@ -39,7 +39,7 @@ export default {
   methods: {
     fetchRunners() {
       this.$http.get("http://localhost:3000/runners").then(function (response) {
-        console.log("This request is succeed! Here is the response:");
+        console.log("This request is succeed! Here is the response for results:");
         this.runners = response.body;
       });
     },

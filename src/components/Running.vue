@@ -25,7 +25,7 @@
     <br />
     <br />
     <br />
-    <el-button type="primary" @click="startGame()">开始比赛</el-button>
+    <el-button type="primary" @click="startGame()">开始</el-button>
   </div>
 </template>
 
@@ -40,7 +40,7 @@ export default {
       //提交给后台的比赛信息，这里要改
       nextGameForm: {
         playerSelected: [],
-        maySelected: [],
+        mapSelected: [],
       },
     };
   },
@@ -49,14 +49,14 @@ export default {
     //加载注册运动员
     fetchRunners() {
       this.$http.get("http://localhost:3000/runners").then(function (response) {
-        console.log("This request is succeed! Here is the response for runners:");
+        console.log("This request succeeded! Here is the response for runners:");
         this.playerOptions = response.body;
       });
     },
     //加载地图
     fetchMaps() {
       this.$http.get("http://localhost:3000/maps").then(function (response) {
-        console.log("This request is succeed! Here is the response for maps:");
+        console.log("This request succeeded! Here is the response for maps:");
         this.mapOptions = response.body;
       });
     },    
