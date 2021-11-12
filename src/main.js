@@ -25,6 +25,7 @@ Vue.use(ElementUI)
 Vue.use(VueResource)
 Vue.use(axios)
 Vue.config.productionTip = false
+
 //实例化Vue实例
 new Vue({
   //定义Vue绑定的根元素，是指最外面的index.html的<div id="app"></div>到时候将会被替换

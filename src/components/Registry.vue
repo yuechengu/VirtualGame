@@ -6,23 +6,23 @@
         <el-input v-model="form.name"></el-input>
       </el-form-item>
       <el-form-item label="性别">
-        <el-radio-group v-model="form.resource">
+        <el-radio-group v-model="form.gender">
           <el-radio label="男"></el-radio>
           <el-radio label="女"></el-radio>
         </el-radio-group>
       </el-form-item>
       <el-form-item label="年龄"><br>
-        <el-slider v-model="age" show-input> </el-slider>
+        <el-slider v-model="form.age" show-input> </el-slider>
       </el-form-item>
       <el-form-item label="平均速度"><br>
-        <el-slider v-model="value2" :step="10" show-stops> </el-slider>
+        <el-slider v-model="form.speed" :step="10" show-stops> </el-slider>
       </el-form-item>
       <el-form-item label="负重"><br>
-        <el-slider v-model="value2" :step="10" show-stops> </el-slider>
+        <el-slider v-model="form.weight" :step="10" show-stops> </el-slider>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">创建</el-button>
-        <el-button>重置</el-button>
+        <el-button type="primary" @click="onSubmit">注册</el-button>
+        <el-button @click="onReset">重置</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -35,6 +35,7 @@ export default {
     return {
       form: {
         name: "",
+        gender: "",
         age: 0,
         speed: 0,
         weight: 0,
@@ -44,20 +45,14 @@ export default {
     };
   },
   methods: {
-    //这里要改
+    //注册方法
     onSubmit() {
       console.log("submit!");
     },
-    //这里要改
-    fetchRunners() {
-      this.$http.get("http://localhost:3000/runners").then(function (response) {
-        console.log("This request is succeed! Here is the response:");
-        this.runners = response.body;
-      });
-    },
-  },
-  created() {
-    this.fetchRunners();
+    //重置方法
+    onReset() {
+
+    }
   },
 };
 </script>
