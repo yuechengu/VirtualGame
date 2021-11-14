@@ -9,7 +9,7 @@
           ><el-button type="primary">返回</el-button></router-link
         ></el-col
       >
-      <el-col :span="2"><el-button type="danger">删除</el-button></el-col>
+      <el-col :span="2"><el-button type="danger" v-on:click="deleteRunner(runner.id)">删除</el-button></el-col>
     </el-row>
 
 <el-descriptions class="margin-top" title=" " :column="2" :size="size" border>
@@ -39,14 +39,14 @@
         <i class="el-icon-tickets"></i>
         基础速度
       </template>
-      {{runner.averageSpeed}}
+      {{runner.speed}}
     </el-descriptions-item>
     <el-descriptions-item>
       <template slot="label">
         <i class="el-icon-s-goods"></i>
         基础负重
       </template>
-      {{runner.addWeight}}
+      {{runner.weight}}
     </el-descriptions-item>
   </el-descriptions>
 
@@ -93,6 +93,12 @@ export default {
           this.recodes = response.body;
         });
     },
+    deleteRunner(id){
+    	this.$http.delete("http://localhost:3000/runners/"+id)
+    		.then(function(response){
+    			this.$router.push({path:"/queryGameScore",query:{alert:"运动员删除成功"}});
+    		})
+    }
   },
   created() {
     this.fetchRunner(this.$route.params.id);

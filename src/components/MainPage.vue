@@ -5,7 +5,7 @@
     <h4 class="box" ref="box">比赛模块</h4>
     <ul class="box" ref="box">
       <li>
-        <router-link v-bind:to="'/registry'">选手注册</router-link>
+        <router-link to="/registry">选手注册</router-link>
       </li>
       <li>
         <router-link v-bind:to="'/running'">开始游戏</router-link>
@@ -41,7 +41,7 @@ export default {
         x: 0,
         alpha: 1,
       },0.2);
-  },
+  }
 };
 </script>
 

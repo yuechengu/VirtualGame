@@ -1,190 +1,188 @@
 {
-    "runners": [
-        {
-            "id": 1,
-            "name": "杭浩岚",
-            "gender": "男",
-            "age": 29,
-            "averageSpeed":45,
-            "addWeight":55
-        },
-        {
-            "id": 2,
-            "name": "冉雅静",
-            "gender": "男",
-            "age": 31,
-            "averageSpeed":45,
-            "addWeight":54
-        },
-        {
-            "id": 3,
-            "name": "道良畴",
-            "gender": "男",
-            "age": 11,
-            "averageSpeed":45,
-            "addWeight":35
-        },
-        {
-            "id": 4,
-            "name": "强白枫",
-            "gender": "女",
-            "age": 99,
-            "averageSpeed":25,
-            "addWeight":50
-        },
-        {
-            "id": 5,
-            "name": "庚雅美",
-            "gender": "女",
-            "age": 29,
-            "averageSpeed":45,
-            "addWeight":55
-        },
-        {
-            "id": 6,
-            "name": "欧三",
-            "gender": "男",
-            "age": 29,
-            "averageSpeed":45,
-            "addWeight":55
-        }
-    ],
-    "maps": [
-        {
-            "mapId": 1,
-            "mapName": "go-to-turkey"
-        },
-        {
-            "mapId": 2,
-            "mapName": "go-to-africa"
-        },
-        {
-            "mapId": 3,
-            "mapName": "go-to-shanghai"
-        }    
-    ],
-    "raceRecode": [
-        {
-          "id": 1,
-          "playerId": 1,
-          "gameId": "AKSDASDASFSDSA",
-          "dateOfGame": "2021/11/10",
-          "gameMapName": "shanghai",
-          "league":1,
-          "averageSpeed":44,
-          "gameDuration":200,
-          "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-          "creationDate":"2021/11/10"
-        },
-        {
-            "id": 2,
-            "playerId": 2,
-            "gameId": "AKSDASDASFSDSA",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "shanghai",
-            "league":2,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          },
-          {
-            "id": 3,
-            "playerId": 3,
-            "gameId": "AKSDASDASFSDSA",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "shanghai",
-            "league":3,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          },
-          {
-            "id": 4,
-            "playerId": 4,
-            "gameId": "AKSDASDASFSDSA",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "shanghai",
-            "league":4,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          },
-          {
-            "id": 5,
-            "playerId": 1,
-            "gameId": "AKSDASDASFSDSB",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "tokyo",
-            "league":1,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          },
-          {
-            "id": 6,
-            "playerId": 2,
-            "gameId": "AKSDASDASFSDSB",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "tokyo",
-            "league":2,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          },
-          {
-            "id": 7,
-            "playerId": 3,
-            "gameId": "AKSDASDASFSDSB",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "tokyo",
-            "league":3,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          },
-          {
-            "id": 8,
-            "playerId": 4,
-            "gameId": "AKSDASDASFSDSB",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "tokyo",
-            "league":4,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          },
-          {
-            "id": 9,
-            "playerId": 5,
-            "gameId": "AKSDASDASFSDSB",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "tokyo",
-            "league":5,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          },
-          {
-            "id": 10,
-            "playerId": 1,
-            "gameId": "AKSDASDASFSDSB",
-            "dateOfGame": "2021/11/10",
-            "gameMapName": "sapporo",
-            "league":1,
-            "averageSpeed":44,
-            "gameDuration":200,
-            "gameCommentary":"我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
-            "creationDate":"2021/11/10"
-          }
-
-    ]
-
+  "runners": [
+    {
+      "id": 1,
+      "name": "杭浩岚",
+      "gender": "男",
+      "age": 29,
+      "speed": 45,
+      "weight": 55
+    },
+    {
+      "id": 2,
+      "name": "冉雅静",
+      "gender": "男",
+      "age": 31,
+      "speed": 45,
+      "weight": 54
+    },
+    {
+      "id": 3,
+      "name": "道良畴",
+      "gender": "男",
+      "age": 11,
+      "speed": 45,
+      "weight": 35
+    },
+    {
+      "id": 5,
+      "name": "庚雅美",
+      "gender": "女",
+      "age": 29,
+      "speed": 45,
+      "weight": 55
+    },
+    {
+      "name": "王宝强",
+      "gender": "女",
+      "age": 35,
+      "speed": 30,
+      "weight": 30,
+      "id": 6
+    },
+    {
+      "name": "王一",
+      "gender": "男",
+      "age": 60,
+      "speed": 50,
+      "weight": 30,
+      "id": 7
+    }
+  ],
+  "maps": [
+    {
+      "mapId": 1,
+      "mapName": "go-to-turkey"
+    },
+    {
+      "mapId": 2,
+      "mapName": "go-to-africa"
+    },
+    {
+      "mapId": 3,
+      "mapName": "go-to-shanghai"
+    }
+  ],
+  "raceRecode": [
+    {
+      "id": 1,
+      "playerId": 1,
+      "gameId": "AKSDASDASFSDSA",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "shanghai",
+      "league": 1,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 2,
+      "playerId": 2,
+      "gameId": "AKSDASDASFSDSA",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "shanghai",
+      "league": 2,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 3,
+      "playerId": 3,
+      "gameId": "AKSDASDASFSDSA",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "shanghai",
+      "league": 3,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 4,
+      "playerId": 4,
+      "gameId": "AKSDASDASFSDSA",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "shanghai",
+      "league": 4,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 5,
+      "playerId": 1,
+      "gameId": "AKSDASDASFSDSB",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "tokyo",
+      "league": 1,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 6,
+      "playerId": 2,
+      "gameId": "AKSDASDASFSDSB",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "tokyo",
+      "league": 2,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 7,
+      "playerId": 3,
+      "gameId": "AKSDASDASFSDSB",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "tokyo",
+      "league": 3,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 8,
+      "playerId": 4,
+      "gameId": "AKSDASDASFSDSB",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "tokyo",
+      "league": 4,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 9,
+      "playerId": 5,
+      "gameId": "AKSDASDASFSDSB",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "tokyo",
+      "league": 5,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    },
+    {
+      "id": 10,
+      "playerId": 1,
+      "gameId": "AKSDASDASFSDSB",
+      "dateOfGame": "2021/11/10",
+      "gameMapName": "sapporo",
+      "league": 1,
+      "averageSpeed": 44,
+      "gameDuration": 200,
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，",
+      "creationDate": "2021/11/10"
+    }
+  ]
 }
