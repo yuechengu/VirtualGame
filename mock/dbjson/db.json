@@ -6,7 +6,9 @@
       "gender": "男",
       "age": 29,
       "speed": 45,
-      "weight": 55
+      "weight": 55,
+      "averageSpeed":44,
+      "winCounts":3
     },
     {
       "id": 2,
@@ -14,7 +16,9 @@
       "gender": "男",
       "age": 31,
       "speed": 45,
-      "weight": 54
+      "weight": 54,
+      "averageSpeed":44,
+      "winCounts":3
     },
     {
       "id": 3,
@@ -22,7 +26,9 @@
       "gender": "男",
       "age": 11,
       "speed": 45,
-      "weight": 35
+      "weight": 35,
+      "averageSpeed":44,
+      "winCounts":3
     },
     {
       "id": 5,
@@ -30,7 +36,9 @@
       "gender": "女",
       "age": 29,
       "speed": 45,
-      "weight": 55
+      "weight": 55,
+      "averageSpeed":44,
+      "winCounts":3
     },
     {
       "name": "王宝强",
@@ -38,7 +46,9 @@
       "age": 35,
       "speed": 30,
       "weight": 30,
-      "id": 6
+      "id": 6,
+      "averageSpeed":44,
+      "winCounts":3
     },
     {
       "name": "王一",
@@ -46,7 +56,9 @@
       "age": 60,
       "speed": 50,
       "weight": 30,
-      "id": 7
+      "id": 7,
+      "averageSpeed":44,
+      "winCounts":3
     }
   ],
   "maps": [

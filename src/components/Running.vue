@@ -64,6 +64,7 @@ export default {
     startGame() {
       let form = null;
       form = this.nextGameForm;
+      console.log(this.nextGameForm)
       const params = form;
       const res = this.startGame(params); //这地方有问题，要改
       console.log(res);

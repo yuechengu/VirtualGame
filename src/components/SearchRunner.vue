@@ -1,36 +1,36 @@
 <template>
   <div class="search">
-      <el-alert v-if="alert" v-bind:title="alert" type="success"> </el-alert>
-      <h1>搜索运动员</h1>
-      <br />
+    <el-alert v-if="alert" v-bind:title="alert" type="success"> </el-alert>
+    <h1>搜索运动员</h1>
+    <br />
 
-      <el-input placeholder="请输入姓名" v-model="filterInput"></el-input>
-      <el-table
-        :data="filterBy(runners, filterInput)"
-        :default-sort="{ prop: 'name', order: 'descending' }"
-      >
-        <el-table-column prop="name" label="姓名" sortable> </el-table-column>
-        <el-table-column prop="gender" label="性别" sortable> </el-table-column>
-        <el-table-column prop="age" label="年龄" sortable> </el-table-column>
-        <el-table-column prop="speed" label="基础速度" sortable>
-        </el-table-column>
-        <el-table-column
-          prop="weight"
-          label="基础负重"
-          sortable
-        ></el-table-column>
-        <el-table-column fixed="right" label="操作" width="100">
-          <template slot-scope="scope">
-            <el-link
-              ><router-link
-                class="btn btn-default"
-                v-bind:to="'/queryGameScore/runnerdetail/' + scope.row.id"
-                >查看</router-link
-              ><i class="el-icon-view el-icon--right"></i
-            ></el-link>
-          </template>
-        </el-table-column>
-      </el-table>
+    <el-input placeholder="请输入姓名" v-model="filterInput"></el-input>
+    <el-table
+      :data="filterBy(runners, filterInput)"
+      :default-sort="{ prop: 'name', order: 'descending' }"
+    >
+      <el-table-column prop="name" label="姓名" sortable> </el-table-column>
+      <el-table-column prop="gender" label="性别" sortable> </el-table-column>
+      <el-table-column prop="age" label="年龄" sortable> </el-table-column>
+      <el-table-column prop="averageSpeed" label="竞赛平均速度" sortable>
+      </el-table-column>
+      <el-table-column
+        prop="winCounts"
+        label="获胜次数"
+        sortable
+      ></el-table-column>
+      <el-table-column fixed="right" label="操作" width="100">
+        <template slot-scope="scope">
+          <el-link
+            ><router-link
+              class="btn btn-default"
+              v-bind:to="'/queryGameScore/runnerdetail/' + scope.row.id"
+              >查看</router-link
+            ><i class="el-icon-view el-icon--right"></i
+          ></el-link>
+        </template>
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 
@@ -66,6 +66,4 @@ export default {
 </script>
 
 <style>
-
-
 </style>
