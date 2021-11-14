@@ -19,8 +19,8 @@ const routes = [
   { path: '/withdraw', component: SearchRunner },
   { path: '/running', component: Running },
   { path: '/queryGameScore', component: SearchRunner },
-  { path: '/searchrunner/runnerdetail/:id', component: RunnerDetail },
-  { path: '/searchrace', component: SearchRace }
+  { path: '/queryGameScore/runnerdetail/:id', component: RunnerDetail },
+  { path: '/searchrace', component: SearchRace }//暂时调整中
 ]
 //创建路由器实例，并且传入`routes`变量作为路由。
 const router = new VueRouter({

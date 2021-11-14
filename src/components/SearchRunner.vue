@@ -1,7 +1,8 @@
 <template>
   <div class="search">
     <div class="search2">
-      <h1>搜索运动员</h1><br>
+      <h1>搜索运动员</h1>
+      <br />
       <el-input placeholder="请输入姓名"></el-input>
       <el-table :data="runners">
         <el-table-column prop="name" label="姓名"> </el-table-column>
@@ -12,14 +13,12 @@
         <el-table-column prop="addWeight" label="基础负重"> </el-table-column>
         <el-table-column fixed="right" label="操作" width="100">
           <template slot-scope="scope">
-            <el-button type="text" size="small"
-              ><router-link
+            <el-link><router-link
                 class="btn btn-default"
-                v-bind:to="'/searchrunner/runnerdetail/' + scope.row.id"
+                v-bind:to="'/queryGameScore/runnerdetail/' + scope.row.id"
                 >查看</router-link
-              ></el-button
+              ><i class="el-icon-view el-icon--right"></i></el-link
             >
-            <el-button type="text" size="small">编辑</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -39,7 +38,9 @@ export default {
   methods: {
     fetchRunners() {
       this.$http.get("http://localhost:3000/runners").then(function (response) {
-        console.log("This request is succeed! Here is the response for results:");
+        console.log(
+          "This request is succeed! Here is the response for results:"
+        );
         this.runners = response.body;
       });
     },
