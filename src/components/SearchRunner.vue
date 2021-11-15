@@ -2,7 +2,7 @@
   <div class="search">
     <el-alert v-if="alert" v-bind:title="alert" type="success"> </el-alert>
     <h1>搜索运动员</h1><br>
-    <el-input placeholder="请输入姓名" v-model="filterInput"></el-input>
+    <el-input placeholder="请输入姓名检索" v-model="filterInput"></el-input>
     <el-table
       :data="filterBy(runners, filterInput)"
       :default-sort="{ prop: 'name', order: 'descending' }"
