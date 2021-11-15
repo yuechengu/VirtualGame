@@ -110,7 +110,7 @@ export default {
 .detail {
   float: left;
   position: relative;
-  width: 60%;
-  left: 20%;
+  width: 80%;
+  left: 10%;
 }
 </style>
