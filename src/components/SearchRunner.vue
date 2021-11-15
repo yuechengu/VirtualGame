@@ -1,29 +1,30 @@
 <template>
   <div class="search">
-    <div class="search2">
-      <h1>搜索运动员</h1><br>
-      <el-input placeholder="请输入姓名"></el-input>
-      <el-table :data="runners">
-        <el-table-column prop="name" label="姓名"> </el-table-column>
-        <el-table-column prop="gender" label="性别"> </el-table-column>
-        <el-table-column prop="age" label="年龄"> </el-table-column>
-        <el-table-column prop="averageSpeed" label="基础速度">
-        </el-table-column>
-        <el-table-column prop="addWeight" label="基础负重"> </el-table-column>
-        <el-table-column fixed="right" label="操作" width="100">
-          <template slot-scope="scope">
-            <el-button type="text" size="small"
-              ><router-link
-                class="btn btn-default"
-                v-bind:to="'/searchrunner/runnerdetail/' + scope.row.id"
-                >查看</router-link
-              ></el-button
-            >
-            <el-button type="text" size="small">编辑</el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-    </div>
+    <el-alert v-if="alert" v-bind:title="alert" type="success"> </el-alert>
+    <h1>搜索运动员</h1><br>
+    <el-input placeholder="请输入姓名" v-model="filterInput"></el-input>
+    <el-table
+      :data="filterBy(runners, filterInput)"
+      :default-sort="{ prop: 'name', order: 'descending' }"
+    >
+      <el-table-column prop="name" label="姓名" sortable> </el-table-column>
+      <el-table-column prop="gender" label="性别" sortable> </el-table-column>
+      <el-table-column prop="age" label="年龄" sortable> </el-table-column>
+      <el-table-column prop="gameSpeed" label="比赛速度" sortable> </el-table-column>
+      <el-table-column prop="winCount" label="获胜次数" sortable> </el-table-column>
+      <!-- 目前的操作，只提供查看功能，后续会增加编辑功能 -->
+      <el-table-column fixed="right" label="操作" width="100">
+        <template slot-scope="scope">
+          <el-link
+            ><router-link
+              class="btn btn-default"
+              v-bind:to="'/queryGameScore/runnerDetail/' + scope.row.id"
+              >查看</router-link
+            ><i class="el-icon-view el-icon--right"></i
+          ></el-link>
+        </template>
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 
@@ -34,17 +35,25 @@ export default {
     return {
       runners: [],
       alert: "",
+      filterInput: "",
     };
   },
   methods: {
     fetchRunners() {
       this.$http.get("http://localhost:3000/runners").then(function (response) {
-        console.log("This request is succeed! Here is the response for results:");
         this.runners = response.body;
+      });
+    },
+    filterBy(runners, value) {
+      return runners.filter(function (runner) {
+        return runner.name.match(value);
       });
     },
   },
   created() {
+    if (this.$route.query.alert) {
+      this.alert = this.$route.query.alert;
+    }
     this.fetchRunners();
   },
 };
@@ -54,10 +63,7 @@ export default {
 .search {
   float: left;
   position: relative;
-  left: 50%;
-}
-.search2 {
-  position: relative;
-  left: -50%;
+  width: 60%;
+  left: 20%;
 }
 </style>
