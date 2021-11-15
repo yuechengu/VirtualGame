@@ -37,7 +37,7 @@ export default {
   name: "runner",
   data() {
     return {
-      runner: { name: "", gender: "", age: 0, speed: 0, weight: 0 },
+      runner: { name: "", gender: "", age: 0, speed: 0, weight: 0, gameSpeed: 0, winCount: 0 },
       alert: "",
     };
   },
@@ -51,16 +51,22 @@ export default {
           type: "error",
         });
       } else {
+        //※要改
+        //这个地方需要调用后台接口，目前阶段是直接注入前端的mock数据
         let newRunner = {
           name: this.runner.name,
           gender: this.runner.gender,
           age: this.runner.age,
           speed: this.runner.speed,
           weight: this.runner.weight,
+          gameSpeed: this.runner.speed + this.runner.weight * 0.1,
+          winCount: 0,
         };
         this.$http
           .post("http://localhost:3000/runners", newRunner)
           .then(function (response) {
+              //※要改
+              //这个地方需要后台返回初始的比赛速度等，目前只返回msg
               this.$refs[FormName].resetFields();
               this.$message({
               showClose: true,

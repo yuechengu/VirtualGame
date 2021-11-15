@@ -4,6 +4,7 @@ npm install vue-cli -g
 npm install vue-resource
 npm install vue-router
 npm install element-ui -S
+npm install gsap --save
 */
 //导入vue实例
 import Vue from 'vue'

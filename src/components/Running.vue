@@ -1,18 +1,17 @@
 <template>
   <div class="running">
-    <h1>请选择运动员和地图</h1>
-    <br />
+    <h1>请选择运动员和地图</h1><br>
     <!-- key对应的是每个运动员的id -->
-    <el-select v-model="player" multiple placeholder="请选择选手">
+    <el-select v-model="runner" multiple placeholder="请选择选手">
       <el-option
-        v-for="item in playerOptions"
+        v-for="item in runnerOptions"
         :key="item.id"
         :label="item.name"
         :value="item.name"
       >
       </el-option>
     </el-select>
-
+    <!-- key对应的是每个地图的id -->
     <el-select v-model="map" collapse-tags style="margin-left: 20px" placeholder="请选择地图">
       <el-option
         v-for="item in mapOptions"
@@ -21,10 +20,7 @@
         :value="item.mapName"
       >
       </el-option>
-    </el-select>
-    <br />
-    <br />
-    <br />
+    </el-select><br><br><br>
     <el-button type="primary" @click="startGame()">开始</el-button>
   </div>
 </template>
@@ -33,13 +29,14 @@
 export default {
   data() {
     return {
-      playerOptions: [],
+      runnerOptions: [],
       mapOptions: [],
-      player: [],
+      runner: [],
       map: [],
-      //提交给后台的比赛信息，这里要改
-      nextGameForm: {
-        playerSelected: [],
+      //※要改
+      //提交给后台的比赛信息表，这里要改
+      GameForm: {
+        runnerSelected: [],
         mapSelected: [],
       },
     };
@@ -50,7 +47,7 @@ export default {
     fetchRunners() {
       this.$http.get("http://localhost:3000/runners").then(function (response) {
         console.log("This request succeeded! Here is the response for runners:");
-        this.playerOptions = response.body;
+        this.runnerOptions = response.body;
       });
     },
     //加载地图
@@ -63,10 +60,12 @@ export default {
     //开始比赛
     startGame() {
       let form = null;
-      form = this.nextGameForm;
-      console.log(this.nextGameForm)
+      form = this.GameForm;
+      console.log(this.GameForm)
       const params = form;
-      const res = this.startGame(params); //这地方有问题，要改
+      //※要改
+      //这地方有问题，要改
+      const res = this.startGame(params); 
       console.log(res);
       if (res.code === "0000") {
         this.$message({
