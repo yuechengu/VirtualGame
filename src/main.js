@@ -5,6 +5,7 @@ npm install vue-resource
 npm install vue-router
 npm install element-ui -S
 npm install gsap --save
+npm install vue-json-excel 无用
 */
 //导入vue实例
 import Vue from 'vue'
@@ -22,11 +23,12 @@ import qs from "qs"
 import VueResource from 'vue-resource' 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import JsonExcel from 'vue-json-excel'
 Vue.use(ElementUI)
 Vue.use(VueResource)
 Vue.use(axios)
 Vue.config.productionTip = false
-
+Vue.component('downloadExcel', JsonExcel)
 //实例化Vue实例
 new Vue({
   //定义Vue绑定的根元素，是指最外面的index.html的<div id="app"></div>到时候将会被替换

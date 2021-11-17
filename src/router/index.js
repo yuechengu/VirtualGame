@@ -16,7 +16,6 @@ const routes = [
   { path: '/mainpage', component: MainPage },
   { path: '/about', component: About },
   { path: '/registry', component: Registry },
-  { path: '/withdraw', component: SearchRunner },
   { path: '/running', component: Running },
   { path: '/queryGameScore', component: SearchRunner },
   { path: '/queryGameScore/runnerdetail/:id', component: RunnerDetail },
