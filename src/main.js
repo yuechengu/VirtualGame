@@ -1,12 +1,3 @@
-/*
-在实施导入之前需要先行安装相关的插件，安装过程如下
-npm install vue-cli -g
-npm install vue-resource
-npm install vue-router
-npm install element-ui -S
-npm install gsap --save
-npm install vue-json-excel 无用
-*/
 //导入vue实例
 import Vue from 'vue'
 //导入App组件
@@ -19,7 +10,7 @@ import axios from 'axios'
 //qs引用
 import qs from "qs"
 // Vue.prototype.$qs=qs
-//导入element ui布局系统
+// 导入element ui布局系统
 import VueResource from 'vue-resource' 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
