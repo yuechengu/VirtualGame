@@ -1,26 +1,35 @@
 <template>
   <div class="running">
-    <h1>请选择运动员和地图</h1><br>
-    <!-- key对应的是每个运动员的id -->
-    <el-select v-model="runner" multiple placeholder="请选择选手">
-      <el-option
-        v-for="item in runnerOptions"
-        :key="item.id"
-        :label="item.name"
-        :value="item.name"
-      >
-      </el-option>
-    </el-select>
-    <!-- key对应的是每个地图的id -->
-    <el-select v-model="map" collapse-tags style="margin-left: 20px" placeholder="请选择地图">
-      <el-option
-        v-for="item in mapOptions"
-        :key="item.mapId"
-        :label="item.mapName"
-        :value="item.mapName"
-      >
-      </el-option>
-    </el-select><br><br><br>
+    <h1>运动员比赛</h1>
+    <el-form ref="form" :model="form">
+      <el-form-item label="活动名称"><br>
+        <el-input v-model="form.gameId"></el-input>
+      </el-form-item>
+      <el-form-item label="参赛人员">
+        <!-- value是每个运动员的id -->
+        <el-select v-model="form.runnerSelected" multiple placeholder="请选择选手">
+          <el-option
+            v-for="item in runnerOptions"
+            :key="item.id"
+            :label="item.name"
+            :value="item.id"
+          >
+          </el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="比赛地图">
+        <!-- value是每个地图的id -->
+        <el-select v-model="form.mapSelected" collapse-tags placeholder="请选择地图">
+          <el-option
+            v-for="item in mapOptions"
+            :key="item.mapId"
+            :label="item.mapName"
+            :value="item.mapId"
+          >
+          </el-option>
+        </el-select>          
+      </el-form-item>
+    </el-form>
     <el-button type="primary" @click="startGame()">开始</el-button>
   </div>
 </template>
@@ -29,24 +38,26 @@
 export default {
   data() {
     return {
+      //加载的选手
       runnerOptions: [],
+      //加载的地图
       mapOptions: [],
-      runner: [],
-      map: [],
-      //※要改
-      //提交给后台的比赛信息表，这里要改
-      GameForm: {
+      //表单
+      form: {
+        gameId: "",
         runnerSelected: [],
-        mapSelected: [],
-      },
+        mapSelected: "",
+      }     
     };
   },
 
   methods: {
-    //加载注册运动员
+    //加载运动员
     fetchRunners() {
       this.$http.get("http://localhost:3000/runners").then(function (response) {
-        console.log("This request succeeded! Here is the response for runners:");
+        console.log(
+          "This request succeeded! Here is the response for runners:"
+        );
         this.runnerOptions = response.body;
       });
     },
@@ -56,28 +67,27 @@ export default {
         console.log("This request succeeded! Here is the response for maps:");
         this.mapOptions = response.body;
       });
-    },    
+    },
+    //※要改
     //开始比赛
     startGame() {
-      let form = null;
-      form = this.GameForm;
-      console.log(this.GameForm)
-      const params = form;
-      //※要改
-      //这地方有问题，要改
-      const res = this.startGame(params); 
-      console.log(res);
-      if (res.code === "0000") {
-        this.$message({
-          type: "info",
-          message: "开始成功",
-        });
-        return;
-      }
-      this.$message({
-        type: "error",
-        message: "开始失败",
-      });
+      // let form = null;
+      // form = this.GameForm;
+      // console.log(this.GameForm);
+      // const params = form;
+      // const res = this.startGame(params);
+      // console.log(res);
+      // if (res.code === "0000") {
+      //   this.$message({
+      //     type: "info",
+      //     message: "开始成功",
+      //   });
+      //   return;
+      // }
+      // this.$message({
+      //   type: "error",
+      //   message: "开始失败",
+      // });
     },
   },
   created() {
@@ -88,4 +98,15 @@ export default {
 </script>
 
 <style>
+.running {
+  font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  float: left;
+  position: relative;
+  width: 30%;
+  left: 35%;
+}
 </style>

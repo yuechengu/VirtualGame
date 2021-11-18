@@ -2,8 +2,7 @@
   <div class="registry">
     <h1>运动员注册</h1>
     <el-form ref="runner" :model="runner">
-      <el-form-item label="姓名" prop="name"
-        ><br />
+      <el-form-item label="姓名" prop="name"><br>
         <el-input v-model="runner.name"></el-input>
       </el-form-item>
       <el-form-item label="性别" prop="name">
@@ -12,16 +11,13 @@
           <el-radio label="女"></el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item label="年龄" prop="age"
-        ><br />
+      <el-form-item label="年龄" prop="age"><br>
         <el-slider v-model="runner.age" show-input> </el-slider>
       </el-form-item>
-      <el-form-item label="基础速度" prop="speed"
-        ><br />
+      <el-form-item label="基础速度" prop="speed"><br>
         <el-slider v-model="runner.speed" :step="10" show-stops> </el-slider>
       </el-form-item>
-      <el-form-item label="基础负重" prop="weight"
-        ><br />
+      <el-form-item label="基础负重" prop="weight"><br>
         <el-slider v-model="runner.weight" :step="10" show-stops> </el-slider>
       </el-form-item>
       <el-form-item>

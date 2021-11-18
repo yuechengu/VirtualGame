@@ -79,6 +79,7 @@
     {
       "recordId": 1,
       "playerId": 1,
+      "gameId":1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 1,
@@ -88,6 +89,7 @@
     {
       "recordId": 2,
       "playerId": 2,
+      "gameId":1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 2,
@@ -97,6 +99,7 @@
     {
       "recordId": 3,
       "playerId": 3,
+      "gameId":1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 3,
@@ -106,6 +109,7 @@
     {
       "recordId": 4,
       "playerId": 4,
+      "gameId":1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 4,
@@ -115,6 +119,7 @@
     {
       "recordId": 5,
       "playerId": 1,
+      "gameId":2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 1,
@@ -124,6 +129,7 @@
     {
       "recordId": 6,
       "playerId": 2,
+      "gameId":2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 2,
@@ -133,6 +139,7 @@
     {
       "recordId": 7,
       "playerId": 3,
+      "gameId":2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 3,
@@ -142,6 +149,7 @@
     {
       "recordId": 8,
       "playerId": 4,
+      "gameId":2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 4,
@@ -151,6 +159,7 @@
     {
       "recordId": 9,
       "playerId": 5,
+      "gameId":2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 5,
@@ -160,6 +169,7 @@
     {
       "recordId": 10,
       "playerId": 1,
+      "gameId":3,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-sapporo",
       "league": 1,

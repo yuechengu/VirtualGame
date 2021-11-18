@@ -46,7 +46,16 @@
     ><br />
 
     <h2 style="">参赛信息</h2>
-
+      <download-excel
+        class="export-excel-wrapper"
+        :data="records"
+        :fields="json_fields"
+        type="xls"
+        name="参赛信息.xls"
+        ><el-button type="info"
+          >下载.xls格式到本地</el-button
+        >
+      </download-excel><br>
     <el-table :data="records">
       <el-table-column prop="dateOfGame" label="比赛时间"> </el-table-column>
       <el-table-column prop="gameMapName" label="比赛地图"> </el-table-column>
@@ -61,17 +70,6 @@
           >删除</el-button
         >
         <el-button type="primary" @click="backToSearch()">返回</el-button>
-        <el-button type="info"
-            >
-        <download-excel
-          class="export-excel-wrapper"
-          :data="records"
-          :fields="json_fields"
-          type="xls"
-          name="下载.xls"
-          >下载
-        </download-excel></el-button
-          >
       </el-row>
   </div>
 </template>
