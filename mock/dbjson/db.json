@@ -79,7 +79,7 @@
     {
       "recordId": 1,
       "playerId": 1,
-      "gameId":1,
+      "gameId": 1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 1,
@@ -89,7 +89,7 @@
     {
       "recordId": 2,
       "playerId": 2,
-      "gameId":1,
+      "gameId": 1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 2,
@@ -99,7 +99,7 @@
     {
       "recordId": 3,
       "playerId": 3,
-      "gameId":1,
+      "gameId": 1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 3,
@@ -109,7 +109,7 @@
     {
       "recordId": 4,
       "playerId": 4,
-      "gameId":1,
+      "gameId": 1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 4,
@@ -119,7 +119,7 @@
     {
       "recordId": 5,
       "playerId": 1,
-      "gameId":2,
+      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 1,
@@ -129,7 +129,7 @@
     {
       "recordId": 6,
       "playerId": 2,
-      "gameId":2,
+      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 2,
@@ -139,7 +139,7 @@
     {
       "recordId": 7,
       "playerId": 3,
-      "gameId":2,
+      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 3,
@@ -149,7 +149,7 @@
     {
       "recordId": 8,
       "playerId": 4,
-      "gameId":2,
+      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 4,
@@ -159,7 +159,7 @@
     {
       "recordId": 9,
       "playerId": 5,
-      "gameId":2,
+      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 5,
@@ -169,12 +169,64 @@
     {
       "recordId": 10,
       "playerId": 1,
-      "gameId":3,
+      "gameId": 3,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-sapporo",
       "league": 1,
       "gameSpeed": 44,
       "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+    }
+  ],
+  "games": [
+    {
+      "gameName": "检垃圾大赛",
+      "runnerSelected": [
+        1,
+        2,
+        3
+      ],
+      "mapSelected": 2,
+      "id": 1
+    },
+    {
+      "gameName": "2",
+      "runnerSelected": [
+        1,
+        2,
+        3
+      ],
+      "mapSelected": 2,
+      "id": 2
+    },
+    {
+      "gamename": "",
+      "runnerSelected": [
+        2,
+        3
+      ],
+      "mapSelected": 1,
+      "gameName": "捡垃圾大赛",
+      "id": 3
+    },
+    {
+      "gamename": "",
+      "runnerSelected": [
+        1,
+        2
+      ],
+      "mapSelected": 1,
+      "gameName": "捡垃圾大赛",
+      "id": 4
+    },
+    {
+      "gamename": "",
+      "runnerSelected": [
+        2,
+        5
+      ],
+      "mapSelected": 1,
+      "gameName": "而我却",
+      "id": 5
     }
   ]
 }

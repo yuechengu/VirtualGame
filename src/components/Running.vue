@@ -2,8 +2,8 @@
   <div class="running">
     <h1>运动员比赛</h1>
     <el-form ref="form" :model="form">
-      <el-form-item label="活动名称"><br>
-        <el-input v-model="form.gameId"></el-input>
+      <el-form-item label="比赛名称"><br>
+        <el-input v-model="form.gameName"></el-input>
       </el-form-item>
       <el-form-item label="参赛人员">
         <!-- value是每个运动员的id -->
@@ -44,7 +44,7 @@ export default {
       mapOptions: [],
       //表单
       form: {
-        gameId: "",
+        gamename: "",
         runnerSelected: [],
         mapSelected: "",
       }     
@@ -68,26 +68,21 @@ export default {
         this.mapOptions = response.body;
       });
     },
-    //※要改
     //开始比赛
     startGame() {
-      // let form = null;
-      // form = this.GameForm;
-      // console.log(this.GameForm);
-      // const params = form;
-      // const res = this.startGame(params);
-      // console.log(res);
-      // if (res.code === "0000") {
-      //   this.$message({
-      //     type: "info",
-      //     message: "开始成功",
-      //   });
-      //   return;
-      // }
-      // this.$message({
-      //   type: "error",
-      //   message: "开始失败",
-      // });
+      this.$http
+        .post("http://localhost:3000/games", JSON.stringify(this.form), {
+          emulateJSON: true,
+        })
+        .then(function (response) {
+          console.log("This request succeeded! Here is the response for start running:");
+        });
+      this.$router.push({
+        path: "/queryRace/result/" + 1,
+        params: {
+          gameid: 1
+        },
+      });
     },
   },
   created() {

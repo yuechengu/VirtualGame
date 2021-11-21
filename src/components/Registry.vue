@@ -55,7 +55,7 @@ export default {
           age: this.runner.age,
           speed: this.runner.speed,
           weight: this.runner.weight,
-          gameSpeed: this.runner.speed + this.runner.weight * 0.1,
+          gameSpeed: 0,
           winCount: 0,
         };
         this.$http
