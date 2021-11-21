@@ -5,7 +5,7 @@
     <el-table
       :data="records"
       v-loading="loading"
-      element-loading-text="拼命加载中"
+      element-loading-text="比赛结果计算中"
       element-loading-spinner="el-icon-loading"
       element-loading-background="rgba(0, 0, 0, 0.8)"
       style="width: 95%"
@@ -27,8 +27,8 @@ export default {
   name: "records",
   data() {
     return {
-      loading: true,
-      records: [],
+      loading: false,
+      records: "",
     };
   },
   methods: {
@@ -36,7 +36,10 @@ export default {
       this.$http
         .get("http://localhost:3000/runnerRecord?gameId=" + id)
         .then(function (response) {
-          this.records = response.body;
+            if(response.body == []){
+              this.loading = true;
+            }
+            this.records = response.body;
         });
     },
     backToSearch() {
@@ -45,9 +48,6 @@ export default {
   },
   created() {
     this.fetchGame(this.$route.params.gameid);
-    if (!this.records.length){
-      this.loading = false;
-    }
   },
 };
 </script>
