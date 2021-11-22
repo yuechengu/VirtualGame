@@ -1,11 +1,3 @@
-/*
-在实施导入之前需要先行安装相关的插件，安装过程如下
-npm install vue-cli -g
-npm install vue-resource
-npm install vue-router
-npm install element-ui -S
-npm install gsap --save
-*/
 //导入vue实例
 import Vue from 'vue'
 //导入App组件
@@ -14,18 +6,22 @@ import App from './App'
 import router from '@/router/index.js'
 //axios接口引用
 import axios from 'axios'
-// Vue.prototype.$axios=Axios
+Vue.prototype.$axios=axios
+axios.defaults.baseURL = '/api' // 开发本地代理
+axios.defaults.headers.post['Contenst-Type'] = 'application/json;'
 //qs引用
-import qs from "qs"
+// import qs from "qs"
 // Vue.prototype.$qs=qs
-//导入element ui布局系统
+// 导入element ui布局系统
 import VueResource from 'vue-resource' 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import JsonExcel from 'vue-json-excel'
 Vue.use(ElementUI)
 Vue.use(VueResource)
 Vue.use(axios)
 Vue.config.productionTip = false
+Vue.component('downloadExcel', JsonExcel)
 
 //实例化Vue实例
 new Vue({

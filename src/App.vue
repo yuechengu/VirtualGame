@@ -18,7 +18,8 @@
           <!-- 查询模块 -->
           <el-submenu index="2">
             <template slot="title">查询模块</template>
-            <el-menu-item index="/queryGameScore">记录管理</el-menu-item>
+            <el-menu-item index="/queryGameScore">运动员查询</el-menu-item>
+            <el-menu-item index="/queryRace">比赛查询</el-menu-item>
           </el-submenu>
           <!-- 扩展模块 -->
           <el-submenu index="3">

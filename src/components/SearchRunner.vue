@@ -1,7 +1,17 @@
 <template>
   <div class="search">
     <el-alert v-if="alert" v-bind:title="alert" type="success"> </el-alert>
-    <h1>搜索运动员</h1><br>
+    <h1>搜索运动员</h1>
+      <download-excel
+        class="export-excel-wrapper"
+        :data="records"
+        :fields="json_fields"
+        type="xls"
+        name="参赛信息.xls"
+        ><el-button type="info"
+          >下载.xls格式到本地</el-button
+        >
+      </download-excel><br>
     <el-input placeholder="请输入姓名检索" v-model="filterInput"></el-input>
     <el-table
       :data="filterBy(runners, filterInput)"

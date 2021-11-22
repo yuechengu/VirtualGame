@@ -14,7 +14,10 @@
     <h4 class="box" ref="box">查询模块</h4>
     <ul class="box" ref="box">
       <li>
-        <router-link v-bind:to="'/queryGameScore'">记录查询</router-link>
+        <router-link v-bind:to="'/queryGameScore'">选手查询</router-link>
+      </li>
+      <li>
+        <router-link v-bind:to="'/queryRace'">比赛查询</router-link>
       </li>
     </ul>
   </div>

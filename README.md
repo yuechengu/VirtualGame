@@ -1,6 +1,6 @@
 # vrunning
 
-> running game
+> 虚拟运动会前端
 
 ## Build Setup
 
@@ -8,8 +8,26 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 在实施导入之前需要先行安装相关的插件，安装过程如下
+npm install vue-cli -g
+npm install vue-resource
+npm install vue-router
+npm install element-ui -S
+
+# 主页的2d动画
+npm install gsap --save 
+
+# 前端mock数据
+npm install -g json-server 
+
+# 无用
+npm install vue-json-excel 
+
+# 服务运行端口localhost:8081
+npm start
+
+# 前端mock数据
+npm run json-server
 
 # build for production with minification
 npm run build
@@ -26,5 +44,3 @@ npm run e2e
 # run all tests
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
