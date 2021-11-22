@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 import MainPage from '@/components/MainPage'
 import About from '@/components/About'
 import Registry from '@/components/Registry'
-import Result from '@/components/Result'//这个是单次比赛的结果，暂时没写
+import Result from '@/components/Result'//这个是单次比赛的结果
 import Running from '@/components/Running'
 import SearchRunner from '@/components/SearchRunner'
 import RunnerDetail from '@/components/RunnerDetail'

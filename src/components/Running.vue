@@ -2,14 +2,11 @@
   <div class="running">
     <h1>运动员比赛</h1>
     <el-form ref="form" :model="form">
-      <el-form-item label="比赛名称"><br>
-        <el-input v-model="form.gameName"></el-input>
-      </el-form-item>
       <el-form-item label="参赛人员">
         <!-- value是每个运动员的id -->
-        <el-select v-model="form.runnerSelected" multiple placeholder="请选择选手">
+        <el-select v-model="form.players" multiple placeholder="请选择选手">
           <el-option
-            v-for="item in runnerOptions"
+            v-for="item in playerOptions"
             :key="item.id"
             :label="item.name"
             :value="item.id"
@@ -18,13 +15,13 @@
         </el-select>
       </el-form-item>
       <el-form-item label="比赛地图">
-        <!-- value是每个地图的id -->
-        <el-select v-model="form.mapSelected" collapse-tags placeholder="请选择地图">
+        <!-- value是每个地图的mapName -->
+        <el-select v-model="form.mapName" collapse-tags placeholder="请选择地图">
           <el-option
             v-for="item in mapOptions"
             :key="item.mapId"
             :label="item.mapName"
-            :value="item.mapId"
+            :value="item.mapName"
           >
           </el-option>
         </el-select>          
@@ -39,26 +36,25 @@ export default {
   data() {
     return {
       //加载的选手
-      runnerOptions: [],
+      playerOptions: [],
       //加载的地图
       mapOptions: [],
       //表单
       form: {
-        gamename: "",
-        runnerSelected: [],
-        mapSelected: "",
+        mapName: "",
+        players: [],
       }     
     };
   },
 
   methods: {
     //加载运动员
-    fetchRunners() {
-      this.$http.get("http://localhost:3000/runners").then(function (response) {
+    fetchplayers() {
+      this.$http.get("http://localhost:3000/players").then(function (response) {
         console.log(
-          "This request succeeded! Here is the response for runners:"
+          "This request succeeded! Here is the response for players:"
         );
-        this.runnerOptions = response.body;
+        this.playerOptions = response.body;
       });
     },
     //加载地图
@@ -68,25 +64,19 @@ export default {
         this.mapOptions = response.body;
       });
     },
-    //开始比赛
+    //axios开始比赛，post方法
     startGame() {
-      this.$http
-        .post("http://localhost:3000/games", JSON.stringify(this.form), {
-          emulateJSON: true,
-        })
-        .then(function (response) {
-          console.log("This request succeeded! Here is the response for start running:");
-        });
-      this.$router.push({
-        path: "/queryRace/result/" + 1,
-        params: {
-          gameid: 1
-        },
-      });
+      console.log(JSON.stringify(this.form))
+      this.$axios.post('/sports/running', JSON.stringify(this.form))
+      .then((result) => {
+        console.log("This request succeeded! Here is the response for start running:");
+        console.log(result.data)
+      })   
     },
   },
+
   created() {
-    this.fetchRunners();
+    this.fetchplayers();
     this.fetchMaps();
   },
 };

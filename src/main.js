@@ -6,9 +6,11 @@ import App from './App'
 import router from '@/router/index.js'
 //axios接口引用
 import axios from 'axios'
-// Vue.prototype.$axios=Axios
+Vue.prototype.$axios=axios
+axios.defaults.baseURL = '/api' // 开发本地代理
+axios.defaults.headers.post['Contenst-Type'] = 'application/json;'
 //qs引用
-import qs from "qs"
+// import qs from "qs"
 // Vue.prototype.$qs=qs
 // 导入element ui布局系统
 import VueResource from 'vue-resource' 
@@ -20,6 +22,7 @@ Vue.use(VueResource)
 Vue.use(axios)
 Vue.config.productionTip = false
 Vue.component('downloadExcel', JsonExcel)
+
 //实例化Vue实例
 new Vue({
   //定义Vue绑定的根元素，是指最外面的index.html的<div id="app"></div>到时候将会被替换

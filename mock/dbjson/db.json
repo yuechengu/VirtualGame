@@ -1,5 +1,5 @@
 {
-  "runners": [
+  "players": [
     {
       "name": "杭浩岚",
       "gender": "男",
@@ -227,6 +227,17 @@
       "mapSelected": 1,
       "gameName": "而我却",
       "id": 5
+    },
+    {
+      "gamename": "",
+      "runnerSelected": [
+        1,
+        3,
+        5
+      ],
+      "mapSelected": 1,
+      "gameName": "某比赛",
+      "id": 6
     }
   ]
 }
