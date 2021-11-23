@@ -59,6 +59,26 @@
       "gameSpeed": 44,
       "winCount": 3,
       "id": 7
+    },
+    {
+      "name": "张四",
+      "gender": "女",
+      "age": 77,
+      "speed": 20,
+      "weight": 40,
+      "gameSpeed": 0,
+      "winCount": 0,
+      "id": 8
+    },
+    {
+      "name": "额外全额完全",
+      "gender": "男",
+      "age": 65,
+      "speed": 40,
+      "weight": 70,
+      "gameSpeed": 0,
+      "winCount": 0,
+      "id": 9
     }
   ],
   "maps": [
@@ -75,7 +95,7 @@
       "mapName": "go-to-shanghai"
     }
   ],
-  "runnerRecord": [
+  "playerRecord": [
     {
       "recordId": 1,
       "playerId": 1,
@@ -180,7 +200,7 @@
   "games": [
     {
       "gameName": "检垃圾大赛",
-      "runnerSelected": [
+      "playerSelected": [
         1,
         2,
         3
@@ -190,7 +210,7 @@
     },
     {
       "gameName": "2",
-      "runnerSelected": [
+      "playerSelected": [
         1,
         2,
         3
@@ -200,7 +220,7 @@
     },
     {
       "gamename": "",
-      "runnerSelected": [
+      "playerSelected": [
         2,
         3
       ],
@@ -210,7 +230,7 @@
     },
     {
       "gamename": "",
-      "runnerSelected": [
+      "playerSelected": [
         1,
         2
       ],
@@ -220,7 +240,7 @@
     },
     {
       "gamename": "",
-      "runnerSelected": [
+      "playerSelected": [
         2,
         5
       ],
@@ -230,7 +250,7 @@
     },
     {
       "gamename": "",
-      "runnerSelected": [
+      "playerSelected": [
         1,
         3,
         5

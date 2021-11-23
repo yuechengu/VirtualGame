@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <h1>搜索比赛记录</h1>
-
+    废弃页面
     <el-table :data="games" style="width: 95%">
       <el-table-column prop="id" label="比赛ID"> </el-table-column>
       <el-table-column prop="gameName" label="比赛名称"> </el-table-column>

@@ -6,7 +6,8 @@
           :default-active="this.$router.path"
           class="el-menu-demo"
           mode="horizontal"
-          router>
+          router
+        >
           <!-- 导航栏 -->
           <el-menu-item index="/mainpage">返回主页</el-menu-item>
           <!-- 比赛模块 -->
@@ -19,7 +20,7 @@
           <el-submenu index="2">
             <template slot="title">查询模块</template>
             <el-menu-item index="/queryGameScore">运动员查询</el-menu-item>
-            <el-menu-item index="/queryRace">比赛查询</el-menu-item>
+            <!-- <el-menu-item index="/queryRace">比赛查询</el-menu-item> -->
           </el-submenu>
           <!-- 扩展模块 -->
           <el-submenu index="3">
@@ -34,17 +35,15 @@
     </el-container>
     <!-- 角栏 -->
     <el-divider></el-divider>
-    <router-link v-bind:to="'/mainpage'">Home</router-link>
     <router-link v-bind:to="'/about'">About</router-link>
+    <router-link v-bind:to="'/mainpage'">Home</router-link>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
-  methods:{
-
-  }
+  methods: {},
 };
 </script>
 <!-- css格式 -->

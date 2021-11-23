@@ -16,9 +16,9 @@
       <li>
         <router-link v-bind:to="'/queryGameScore'">选手查询</router-link>
       </li>
-      <li>
+      <!-- <li>
         <router-link v-bind:to="'/queryRace'">比赛查询</router-link>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>
