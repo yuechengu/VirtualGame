@@ -22,7 +22,7 @@
       <el-table-column prop="name" label="姓名" sortable> </el-table-column>
       <el-table-column prop="gender" label="性别" sortable> </el-table-column>
       <el-table-column prop="age" label="年龄" sortable> </el-table-column>
-      <el-table-column prop="gameSpeed" label="比赛速度" sortable>
+      <el-table-column prop="averageSpeed" label="比赛速度" sortable>
       </el-table-column>
       <el-table-column prop="winCount" label="获胜次数" sortable>
       </el-table-column>
@@ -52,8 +52,8 @@ export default {
         玩家ID: "id",
         玩家姓名: "name",
         性别: "gender",
-        速度: "speed",
-        负重: "weight",
+        速度: "averageSpeed",
+        负重: "addWeight",
         比赛速度: "gameSpeed",
         获胜次数: "winCount",
       },

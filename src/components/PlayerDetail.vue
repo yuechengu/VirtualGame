@@ -8,6 +8,14 @@
       :size="size"
       border
     >
+
+        <el-descriptions-item>
+        <template slot="label">
+          <i class="el-icon-user"></i>
+          选手ID
+        </template>
+        {{ player.id }}
+      </el-descriptions-item>
       <el-descriptions-item>
         <template slot="label">
           <i class="el-icon-user"></i>
@@ -34,14 +42,14 @@
           <i class="el-icon-tickets"></i>
           基础速度
         </template>
-        {{ player.speed }}
+        {{ player.averageSpeed }}
       </el-descriptions-item>
       <el-descriptions-item>
         <template slot="label">
           <i class="el-icon-s-goods"></i>
           基础负重
         </template>
-        {{ player.weight }}
+        {{ player.addWeight }}
       </el-descriptions-item> </el-descriptions
     ><br />
 
@@ -59,7 +67,7 @@
       <el-table-column prop="gameMapName" label="比赛地图"> </el-table-column>
       <el-table-column prop="league" label="排名"> </el-table-column>
       <el-table-column prop="gameSpeed" label="比赛速度"> </el-table-column>
-      <el-table-column prop="commentary" label="比赛讲解">
+      <el-table-column prop="gameCommentary" label="比赛讲解">
       </el-table-column> </el-table
     ><br /><br />
 
@@ -87,7 +95,7 @@ export default {
         游戏地图: "gameMapName",
         名次: "league",
         比赛速度: "gameSpeed",
-        比赛解说: "commentary",
+        比赛解说: "gameCommentary",
       },
       json_meta: [
         [

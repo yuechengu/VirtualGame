@@ -16,13 +16,13 @@
         ><br />
         <el-slider v-model="player.age" show-input> </el-slider>
       </el-form-item>
-      <el-form-item label="基础速度" prop="speed"
+      <el-form-item label="基础速度" prop="averageSpeed"
         ><br />
-        <el-slider v-model="player.speed" :step="10" show-stops> </el-slider>
+        <el-slider v-model="player.averageSpeed" :step="10" show-stops> </el-slider>
       </el-form-item>
-      <el-form-item label="基础负重" prop="weight"
+      <el-form-item label="基础负重" prop="addWeight"
         ><br />
-        <el-slider v-model="player.weight" :step="10" show-stops> </el-slider>
+        <el-slider v-model="player.addWeight" :step="10" show-stops> </el-slider>
       </el-form-item>
     </el-form>
 
@@ -42,8 +42,8 @@ export default {
         name: "",
         gender: "",
         age: 0,
-        speed: 0,
-        weight: 0,
+        averageSpeed: 0,
+        addWeight: 0,
         gameSpeed: 0,
         winCount: 0,
       },
@@ -66,8 +66,8 @@ export default {
           name: this.player.name,
           gender: this.player.gender,
           age: this.player.age,
-          speed: this.player.speed,
-          weight: this.player.weight,
+          averageSpeed: this.player.averageSpeed,
+          addWeight: this.player.addWeight,
           gameSpeed: 0,
           winCount: 0,
         };
