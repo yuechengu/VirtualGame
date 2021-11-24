@@ -20,6 +20,7 @@ module.exports = {
       //     '^/api': ''  // 替换target中的请求地址，也就是说/api=/target，请求target这个地址的时候直接写成/api即可。
       //   }
       // },
+      
       //mock跨域改造
       '/api':{
         target: 'http://localhost:3000',//请求的mock接口

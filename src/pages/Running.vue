@@ -5,7 +5,12 @@
     <el-form ref="running" :model="form">
       <el-form-item label="参赛人员">
         <!-- value是每个运动员的id -->
-        <el-select v-model="form.players" multiple placeholder="请选择选手">
+        <el-select
+          v-model="form.players"
+          multiple
+          placeholder="请选择选手"
+          style="width: 100%"
+        >
           <el-option
             v-for="item in playerOptions"
             :key="item.id"
@@ -21,6 +26,7 @@
           v-model="form.mapName"
           collapse-tags
           placeholder="请选择地图"
+          style="width: 100%"
         >
           <el-option
             v-for="item in mapOptions"
@@ -34,9 +40,38 @@
     </el-form>
 
     <br /><br />
-    <el-button type="primary" @click="startGame()">开始</el-button>
+    <el-button
+      type="primary"
+      @click="
+        startGame()
+      "
+      >开始</el-button
+    >
     <!-- <el-button type="info" @click="onReset('form')">重置</el-button> -->
-    <el-button type="success" @click="backToMain()">返回</el-button>
+    <el-button type="info" @click="backToMain()">返回</el-button>
+
+    <!-- el-dialog 是弹窗样式，title 绑定弹窗的标题内容，visible 绑定弹窗是否展示 -->
+    <el-dialog title="比赛结果" :visible.sync="dialogVisible">
+      <p>比赛进行中</p>
+      <!-- <el-table
+        :data="records"
+        v-loading="loading"
+        element-loading-text="比赛结果计算中"
+        element-loading-spinner="el-icon-loading"
+        element-loading-background="rgba(0, 0, 0, 0.8)"
+        style="width: 95%"
+      >
+        <el-table-column prop="playerId" label="参赛人ID"> </el-table-column>
+        <el-table-column prop="league" label="排名"> </el-table-column>
+        <el-table-column prop="gameSpeed" label="比赛中速度"> </el-table-column>
+        <el-table-column prop="gameCommentary" label="比赛描述">
+        </el-table-column>
+      </el-table>
+      <br /><br />
+      <el-row>
+        <el-button type="primary" @click="backToSearch()">返回</el-button>
+      </el-row> -->
+    </el-dialog>
   </div>
 </template>
 
@@ -53,10 +88,41 @@ export default {
         mapName: "",
         players: [],
       },
+      //弹窗是否出现
+      dialogVisible: false,
     };
   },
 
   methods: {
+    // axios开始比赛，post方法
+    startGame() {
+      // 弹出对话框，显示加载中
+      this.dialogVisible = true;
+      console.log(JSON.stringify(this.form));
+
+      this.$axios
+        .post("/sports/running", JSON.stringify(this.form))
+        .then((result) => {
+          console.log(
+            "This request succeeded! Here is the response of running:"
+          );
+
+          // 返回比赛结果表，并提供下载
+          console.log(result.data);
+        });
+    },
+    backToMain() {
+      this.$router.push("/");
+    },
+    //重置方法
+    onReset(FormName) {
+      this.$refs[FormName].resetFields();
+      this.$message({
+        showClose: true,
+        message: "信息已被重置",
+        type: "warning",
+      });
+    },
     //加载运动员
     fetchplayers() {
       /*vue-resource实现
@@ -83,30 +149,6 @@ export default {
         this.mapOptions = result.data;
       });
     },
-    //axios开始比赛，post方法
-    startGame() {
-      console.log(JSON.stringify(this.form));
-      this.$axios
-        .post("/sports/running", JSON.stringify(this.form))
-        .then((result) => {
-          console.log(
-            "This request succeeded! Here is the response for start running:"
-          );
-          console.log(result.data);
-        });
-    },
-    backToMain() {
-      this.$router.push("/");
-    },
-    //重置方法
-    onReset(FormName) {
-      this.$refs[FormName].resetFields();
-      this.$message({
-        showClose: true,
-        message: "信息已被重置",
-        type: "warning",
-      });
-    },
   },
   created() {
     this.fetchplayers();
@@ -124,7 +166,8 @@ export default {
   color: #2c3e50;
   float: left;
   position: relative;
-  width: 30%;
-  left: 35%;
+  width: 50%;
+  left: 25%;
+  height: 100%;
 }
 </style>

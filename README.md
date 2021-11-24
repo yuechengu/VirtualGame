@@ -14,13 +14,10 @@ npm install vue-resource
 npm install vue-router
 npm install element-ui -S
 
-# 主页的2d动画
-npm install gsap --save 
-
 # 前端mock数据
 npm install -g json-server 
 
-# 无用
+# excel下载
 npm install vue-json-excel 
 
 # 服务运行端口localhost:8081

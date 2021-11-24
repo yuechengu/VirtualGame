@@ -1,62 +1,67 @@
 <template>
   <div id="app">
-    <el-container>
-      <el-header>
-        <el-menu
-          :default-active="this.$router.path"
-          class="el-menu-demo"
-          mode="horizontal"
-          router
-        >
-          <!-- 导航栏 -->
-          <el-menu-item index="/mainpage">返回主页</el-menu-item>
-          <!-- 比赛模块 -->
-          <el-submenu index="1">
-            <template slot="title">比赛模块</template>
-            <el-menu-item index="/registry">选手注册</el-menu-item>
-            <el-menu-item index="/running">开始游戏</el-menu-item>
-          </el-submenu>
-          <!-- 查询模块 -->
-          <el-submenu index="2">
-            <template slot="title">查询模块</template>
-            <el-menu-item index="/queryGameScore">运动员查询</el-menu-item>
-            <!-- <el-menu-item index="/queryRace">比赛查询</el-menu-item> -->
-          </el-submenu>
-          <!-- 扩展模块 -->
-          <el-submenu index="3">
-            <template slot="title">其他功能</template>
-            <el-menu-item index="3-1" disabled>编辑选手</el-menu-item>
-            <el-menu-item index="3-2" disabled>编辑地图</el-menu-item>
-          </el-submenu>
-        </el-menu>
-      </el-header>
-      <!-- 自由跳转路由区域 -->
-      <el-main><router-view></router-view></el-main>
+    <el-container style="border: 1px solid #eee; min-height: 100%;">
+      <el-aside style="background-color: #545c64; width:auto;">
+        <!-- 使用 Menu 组件，传入变量 isMenuCollapse -->
+        <Menu :isMenuCollapse="isMenuCollapse" />
+      </el-aside>
+      <el-container>
+        <el-header>
+          <!-- 点击切换收起左侧菜单 -->
+          <el-button @click="isMenuCollapse = !isMenuCollapse" style="font-size: 24px;padding: 5px 8px;">
+            <i :class="isMenuCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'" />
+          </el-button>
+        </el-header>
+        <el-main>
+          <!-- 子路由界面 -->
+          <router-view></router-view>
+        </el-main>
+      </el-container>
     </el-container>
-    <!-- 角栏 -->
-    <el-divider></el-divider>
-    <router-link v-bind:to="'/about'">About</router-link>
-    <router-link v-bind:to="'/mainpage'">Home</router-link>
   </div>
 </template>
 
 <script>
+// 导入Menu组件
+import Menu from './components/Menu.vue';
 export default {
   name: "App",
-  methods: {},
+  data:() =>{
+    return {
+      isMenuCollapse: false, // 是否收起左侧菜单
+    }
+  },
+  components: {
+    Menu
+  }
 };
 </script>
 <!-- css格式 -->
 <style>
+html, body {
+  margin: 0;
+  height: 100%;
+}
 #app {
   font-family: "微软雅黑", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
-.router-link-active {
-  text-decoration: none;
+.el-header {
+  color: #333;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+  font-size: 12px;
+  background-color: #ededed;
+}
+.el-aside {
+  color: #333;
+}
+router-view {
+  height: 100%;
 }
 </style>

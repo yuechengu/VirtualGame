@@ -28,8 +28,8 @@
 
     <br />
     <el-button type="primary" @click="onSubmit('player')">注册</el-button>
-    <el-button type="info" @click="onReset('player')">重置</el-button>
-    <el-button type="success" @click="backToMain()">返回</el-button>
+    <el-button @click="onReset('player')">重置</el-button>
+    <el-button type="info" @click="backToMain()">返回</el-button>
   </div>
 </template>
 
@@ -121,7 +121,7 @@ export default {
   color: #2c3e50;
   float: left;
   position: relative;
-  width: 30%;
-  left: 35%;
+  width: 50%;
+  left: 25%;
 }
 </style>

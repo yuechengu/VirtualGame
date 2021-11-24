@@ -1,14 +1,14 @@
 <template>
   <div class="playerAll">
     <el-alert v-if="alert" v-bind:title="alert" type="success"> </el-alert>
-    <h1>搜索运动员</h1>
+    <h1>运动员列表</h1>
     <download-excel
       class="export-excel-wrapper"
       :data="playerAll"
       :fields="player_fields"
       type="xls"
       name="选手信息.xls"
-      ><el-button type="info">下载.xls格式到本地</el-button> </download-excel
+      ><el-button type="success">下载.xls格式到本地</el-button> </download-excel
     ><br />
     <el-row>
       <el-input placeholder="请输入姓名检索" v-model="filterInput"></el-input>
@@ -29,16 +29,17 @@
       <!-- 目前的操作，只提供查看功能，后续会增加编辑功能 -->
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
-          <el-link
-            ><router-link
-              class="btn btn-default"
-              v-bind:to="'/queryGameScore/playerDetail/' + scope.row.id"
-              >查看</router-link
-            ><i class="el-icon-view el-icon--right"></i
-          ></el-link>
+          <el-button
+            :disabled="showDeleteCheckbox"
+            @click="editTableItem(scope.row.id)"
+            size="small"
+            >详细</el-button
+          >
         </template>
       </el-table-column>
     </el-table>
+    <br />
+    <el-button type="info" @click="backToMain()">返回</el-button>
   </div>
 </template>
 
@@ -78,6 +79,11 @@ export default {
         return player.name.match(value);
       });
     },
+    //修改一个数据
+    editTableItem(id){
+      // 跳转到编辑页面
+      this.$router.push({name: 'PlayerDetail', params: {id}});
+    },
     //返回主页
     backToMain() {
       this.$router.push("/");
@@ -95,10 +101,11 @@ export default {
 </script>
 
 <style>
-.search {
+.playerAll {
+  text-align: center;
   float: left;
   position: relative;
-  width: 60%;
-  left: 20%;
+  width: 80%;
+  left: 10%;
 }
 </style>

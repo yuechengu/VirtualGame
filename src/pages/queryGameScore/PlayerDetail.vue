@@ -1,6 +1,10 @@
 <template>
-  <div class="detail">
-    <h1>基本信息</h1>
+  <div class="playerDetail">
+    <h1>详细信息</h1>   
+    <el-row>
+      <el-button type="danger" @click="deleteplayer(player.id)">删除</el-button>  
+      <el-button type="info" @click="backToSearch()">返回</el-button>
+    </el-row>
     <el-descriptions
       class="margin-top"
       title=" "
@@ -8,7 +12,6 @@
       :size="size"
       border
     >
-
         <el-descriptions-item>
         <template slot="label">
           <i class="el-icon-user"></i>
@@ -50,17 +53,17 @@
           基础负重
         </template>
         {{ player.addWeight }}
-      </el-descriptions-item> </el-descriptions
-    ><br />
+      </el-descriptions-item> 
+    </el-descriptions><br />
 
-    <h2 style="">参赛信息</h2>
+    <h1 style="">参赛信息</h1>
     <download-excel
       class="export-excel-wrapper"
       :data="records"
       :fields="json_fields"
       type="xls"
       name="参赛信息.xls"
-      ><el-button type="info">下载.xls格式到本地</el-button> </download-excel
+      ><el-button type="success">下载.xls格式到本地</el-button> </download-excel
     ><br />
     <el-table :data="records">
       <el-table-column prop="dateOfGame" label="比赛时间"> </el-table-column>
@@ -70,17 +73,12 @@
       <el-table-column prop="gameCommentary" label="比赛讲解">
       </el-table-column> </el-table
     ><br /><br />
-
-    <el-row>
-      <el-button type="danger" @click="deleteplayer(player.id)">删除</el-button>
-      <el-button type="success" @click="backToSearch()">返回</el-button>
-    </el-row>
   </div>
 </template>
 
 <script>
 export default {
-  name: "playerdetails",
+  name: "playerDetail",
   data() {
     return {
       player: "",
@@ -154,7 +152,7 @@ export default {
       });
     },
     backToSearch() {
-      this.$router.push("/queryGameScore");
+      this.$router.go(-1);
     },
   },
   created() {
@@ -166,7 +164,8 @@ export default {
 
 
 <style scoped>
-.detail {
+.playerDetail {
+  text-align: center;
   float: left;
   position: relative;
   width: 80%;
