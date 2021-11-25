@@ -58,7 +58,7 @@
 const menus = [
   {
     text: "查询模块", // 父菜单名字
-    icon: "el-icon-setting", // 父菜单图标
+    icon: "el-icon-search", // 父菜单图标
     subMenus: [{ text: "运动员查询", routerName: 'QueryGameScore' }]  // 子菜单列表
   },
   {
@@ -68,8 +68,8 @@ const menus = [
   },
   {
     text: "扩展功能",
-    icon: "el-icon-message", 
-    routerName: '' // 日志信息这里为空，则不会进行跳转
+    icon: "el-icon-loading", 
+    subMenus: [{ text: "比赛回放（开发中）", routerName: '' }] // 日志信息这里为空，则不会进行跳转
   }
 ].map((x, i) => {
   // 添加 index，可用于默认展开 default-openeds 属性，和激活状态 efault-active 属性的设置
@@ -123,6 +123,6 @@ export default {
 <style>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 250px;
-  min-height: 600px;
+
 }
 </style>        
