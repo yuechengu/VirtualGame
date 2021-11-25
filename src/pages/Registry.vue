@@ -26,7 +26,7 @@
       </el-form-item>
     </el-form>
 
-    <br />
+    <br /><br />
     <el-button type="primary" @click="onSubmit('player')">注册</el-button>
     <el-button @click="onReset('player')">重置</el-button>
     <el-button type="info" @click="backToMain()">返回</el-button>

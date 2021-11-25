@@ -30,15 +30,13 @@
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
           <el-button
-            :disabled="showDeleteCheckbox"
             @click="editTableItem(scope.row.id)"
-            size="small"
             >详细</el-button
           >
         </template>
       </el-table-column>
     </el-table>
-    <br />
+    <br /><br />
     <el-button type="info" @click="backToMain()">返回</el-button>
   </div>
 </template>

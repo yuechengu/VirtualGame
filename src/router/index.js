@@ -5,7 +5,6 @@ Vue.use(VueRouter);
 import Home from "@/pages/Home.vue";
 import Registry from "@/pages/Registry.vue";
 import Running from "@/pages/Running.vue";
-// import Result from '@/components/Result.vue'
 import QueryGameScore from "@/pages/queryGameScore/QueryGameScore.vue";
 import PlayerDetail from "@/pages/queryGameScore/PlayerDetail.vue";
 

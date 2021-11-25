@@ -2,7 +2,7 @@
   <div class="running">
     <h1>运动员比赛</h1>
     <br />
-    <el-form ref="running" :model="form">
+    <el-form ref="runningForm" :model="form">
       <el-form-item label="参赛人员">
         <!-- value是每个运动员的id -->
         <el-select
@@ -40,14 +40,8 @@
     </el-form>
 
     <br /><br />
-    <el-button
-      type="primary"
-      @click="
-        startGame()
-      "
-      >开始</el-button
-    >
-    <!-- <el-button type="info" @click="onReset('form')">重置</el-button> -->
+    <el-button type="primary" @click="startGame()">开始</el-button>
+    <el-button @click="resetRunning()">重置</el-button>
     <el-button type="info" @click="backToMain()">返回</el-button>
 
     <!-- el-dialog 是弹窗样式，title 绑定弹窗的标题内容，visible 绑定弹窗是否展示 -->
@@ -91,28 +85,36 @@ export default {
       //是否加载遮罩
       loading: false,
       //结果表
-      records: "",      
+      records: [],      
     };
   },
 
   methods: {
     //开始比赛，post方法
     startGame() {
-      //弹出对话框，显示加载中
-      this.dialogVisible = true;
-      this.loading = true;
-      //控制台看一下提交的表单
-      console.log(JSON.stringify(this.form));
-      //发出post请求
-      this.$axios
-        .post("/sports/running", JSON.stringify(this.form))
-        .then((result) => {
-          console.log("This request succeeded! Here is the response of running:");          
-          //控制台看一下返回的表单
-          console.log(result.data);
-          //返回比赛结果表，并提供下载
-          this.records = response.body;
+      if (!this.form.players || !this.form.mapName) {
+        this.$message({
+          showClose: true,
+          message: "请输入完整信息",
+          type: "error",
         });
+      } else {
+        //弹出对话框，显示加载中
+        this.dialogVisible = true;
+        this.loading = true;
+        //控制台看一下提交的表单
+        console.log(JSON.stringify(this.form));
+        //发出post请求
+        this.$axios
+          .post("/sports/running", JSON.stringify(this.form))
+          .then((result) => {
+            console.log("This request succeeded! Here is the response of running:");          
+            //控制台看一下返回的表单
+            console.log(result.data);
+            //返回比赛结果表，并提供下载
+            this.records = response.body;
+          })        
+      };
     },  
     backToMain() {
       this.$router.push("/");
@@ -121,13 +123,9 @@ export default {
       this.dialogVisible = false;
     },
     //重置方法
-    onReset(FormName) {
-      this.$refs[FormName].resetFields();
-      this.$message({
-        showClose: true,
-        message: "信息已被重置",
-        type: "warning",
-      });
+    resetRunning() {
+      this.form.players=[];
+      this.form.mapName="";
     },
     //加载运动员
     fetchplayers() {
