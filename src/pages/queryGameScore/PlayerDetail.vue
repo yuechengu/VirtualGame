@@ -2,6 +2,7 @@
   <div class="playerDetail">
     <h1>详细信息</h1>   
     <el-row>
+      <el-button type="primary" disabled>编辑</el-button>
       <el-button type="danger" @click="deleteplayer(player.id)">删除</el-button>  
       <el-button type="info" @click="backToSearch()">返回</el-button>
     </el-row>
@@ -9,7 +10,6 @@
       class="margin-top"
       title=" "
       :column="2"
-      :size="size"
       border
     >
         <el-descriptions-item>

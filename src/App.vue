@@ -38,9 +38,8 @@ export default {
 </script>
 <!-- css格式 -->
 <style>
-html, body {
+body {
   margin: 0;
-  height: 100%;
 }
 #app {
   font-family: "微软雅黑", Helvetica, Arial, sans-serif;
@@ -60,8 +59,5 @@ html, body {
 }
 .el-aside {
   color: #333;
-}
-router-view {
-  height: 100%;
 }
 </style>

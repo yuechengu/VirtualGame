@@ -1,13 +1,13 @@
 <template>
-  <!-- 顺便调整了下颜色 -->
   <!-- 此处有个 default-active 属性需要注意，是用来设置菜单的选中样式，我们需要根据当前路由情况来选中 -->
-  <el-menu :collapse="isMenuCollapse"
+  <el-menu 
+    :collapse="isMenuCollapse"
     :default-openeds="['0', '1']"
     :default-active="activeIndex"
     class="el-menu-vertical-demo"
     background-color="#545c64"
     text-color="#fff"
-    active-text-color="#ffd04b"
+    active-text-color="#67C23A"
   >
     <!-- 遍历生成父菜单选项 -->
     <template v-for="menu in menus">
@@ -16,12 +16,13 @@
         v-if="menu.subMenus && menu.subMenus.length"
         :index="menu.index"
         :key="menu.index"
+        style="outline: 1px solid #545c64"
       >
         <template slot="title">
           <!-- 绑个父菜单的 icon -->
           <i :class="menu.icon"></i>
           <!-- 再绑个父菜单的名称 text -->
-          <!-- slot 其实类似于占位符，可以去 Vue 官方文档了解一下插槽 -->
+          <!-- slot 其实类似于占位符，Vue 官方文档里的插槽 -->
           <span slot="title">{{menu.text}}</span>
         </template>
         <el-menu-item-group>
@@ -58,7 +59,7 @@
 const menus = [
   {
     text: "查询模块", // 父菜单名字
-    icon: "el-icon-setting", // 父菜单图标
+    icon: "el-icon-search", // 父菜单图标
     subMenus: [{ text: "运动员查询", routerName: 'QueryGameScore' }]  // 子菜单列表
   },
   {
@@ -68,8 +69,8 @@ const menus = [
   },
   {
     text: "扩展功能",
-    icon: "el-icon-message", 
-    routerName: '' // 日志信息这里为空，则不会进行跳转
+    icon: "el-icon-loading", 
+    subMenus: [{ text: "比赛回放（开发中）", routerName: '' }] // 日志信息这里为空，则不会进行跳转
   }
 ].map((x, i) => {
   // 添加 index，可用于默认展开 default-openeds 属性，和激活状态 efault-active 属性的设置
@@ -123,6 +124,5 @@ export default {
 <style>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 250px;
-  min-height: 600px;
 }
 </style>        
