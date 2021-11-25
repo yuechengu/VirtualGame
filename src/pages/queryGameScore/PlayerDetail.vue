@@ -1,6 +1,10 @@
 <template>
-  <div class="detail">
-    <h1>基本信息</h1>
+  <div class="playerDetail">
+    <h1>详细信息</h1>   
+    <el-row>
+      <el-button type="danger" @click="deleteplayer(player.id)">删除</el-button>  
+      <el-button type="info" @click="backToSearch()">返回</el-button>
+    </el-row>
     <el-descriptions
       class="margin-top"
       title=" "
@@ -8,78 +12,76 @@
       :size="size"
       border
     >
+        <el-descriptions-item>
+        <template slot="label">
+          <i class="el-icon-user"></i>
+          选手ID
+        </template>
+        {{ player.id }}
+      </el-descriptions-item>
       <el-descriptions-item>
         <template slot="label">
           <i class="el-icon-user"></i>
           选手名
         </template>
-        {{ runner.name }}
+        {{ player.name }}
       </el-descriptions-item>
       <el-descriptions-item>
         <template slot="label">
           <i class="el-icon-male"></i>
           性别
         </template>
-        {{ runner.gender }}
+        {{ player.gender }}
       </el-descriptions-item>
       <el-descriptions-item>
         <template slot="label">
           <i class="el-icon-watch"></i>
           年龄
         </template>
-        {{ runner.age }}
+        {{ player.age }}
       </el-descriptions-item>
       <el-descriptions-item>
         <template slot="label">
           <i class="el-icon-tickets"></i>
           基础速度
         </template>
-        {{ runner.speed }}
+        {{ player.averageSpeed }}
       </el-descriptions-item>
       <el-descriptions-item>
         <template slot="label">
           <i class="el-icon-s-goods"></i>
           基础负重
         </template>
-        {{ runner.weight }}
-      </el-descriptions-item> </el-descriptions
-    ><br />
+        {{ player.addWeight }}
+      </el-descriptions-item> 
+    </el-descriptions><br />
 
-    <h2 style="">参赛信息</h2>
-      <download-excel
-        class="export-excel-wrapper"
-        :data="records"
-        :fields="json_fields"
-        type="xls"
-        name="参赛信息.xls"
-        ><el-button type="info"
-          >下载.xls格式到本地</el-button
-        >
-      </download-excel><br>
+    <h1 style="">参赛信息</h1>
+    <download-excel
+      class="export-excel-wrapper"
+      :data="records"
+      :fields="json_fields"
+      type="xls"
+      name="参赛信息.xls"
+      ><el-button type="success">下载.xls格式到本地</el-button> </download-excel
+    ><br />
     <el-table :data="records">
       <el-table-column prop="dateOfGame" label="比赛时间"> </el-table-column>
       <el-table-column prop="gameMapName" label="比赛地图"> </el-table-column>
       <el-table-column prop="league" label="排名"> </el-table-column>
       <el-table-column prop="gameSpeed" label="比赛速度"> </el-table-column>
-      <el-table-column prop="commentary" label="比赛讲解">
+      <el-table-column prop="gameCommentary" label="比赛讲解">
       </el-table-column> </el-table
     ><br /><br />
-
-    <el-row>
-        <el-button type="danger" @click="deleteRunner(runner.id)"
-          >删除</el-button
-        >
-        <el-button type="primary" @click="backToSearch()">返回</el-button>
-      </el-row>
   </div>
 </template>
 
 <script>
 export default {
-  name: "runnerdetails",
+  name: "playerDetail",
   data() {
     return {
-      runner: "",
+      player: "",
       //用来存放每个运动员的详细信息
       records: [],
       //用来存放运动员的每条记录
@@ -91,7 +93,7 @@ export default {
         游戏地图: "gameMapName",
         名次: "league",
         比赛速度: "gameSpeed",
-        比赛解说: "commentary",
+        比赛解说: "gameCommentary",
       },
       json_meta: [
         [
@@ -105,39 +107,56 @@ export default {
   },
   methods: {
     //根据点击详细的id返回运动员的详细信息
-    fetchRunner(id) {
+    fetchplayer(id) {
+      /*
       this.$http
-        .get("http://localhost:3000/runners/" + id)
+        .get("http://localhost:3000/players/" + id)
         .then(function (response) {
-          this.runner = response.body;
+          this.player = response.body;
         });
+      */
+      this.$axios.get("/players/" + id).then((result) => {
+        this.player = result.data;
+      });
     },
     //根据运动员的id筛选出运动员的参赛记录
     fetchRecord(id) {
+      /*
       this.$http
-        .get("http://localhost:3000/runnerRecord?playerId=" + id)
+        .get("http://localhost:3000/playerRecord?playerId=" + id)
         .then(function (response) {
           this.records = response.body;
-          console.log(this.records);
         });
+      */
+      this.$axios.get("/playerRecord?playerId=" + id).then((result) => {
+        this.records = result.data;
+      });
     },
     //根据运动的id删除相应的运动员
-    deleteRunner(id) {
+    deleteplayer(id) {
+      /*
       this.$http
-        .delete("http://localhost:3000/runners/" + id)
+        .delete("http://localhost:3000/players/" + id)
         .then(function (response) {
           this.$router.push({
             path: "/queryGameScore",
             query: { alert: "运动员删除成功" },
           });
         });
+      */
+      this.$axios.delete("/players/" + id).then((result) => {
+        this.$router.push({
+          path: "/queryGameScore",
+          query: { alert: "运动员删除成功" },
+        });
+      });
     },
     backToSearch() {
-      this.$router.push("/queryGameScore");
+      this.$router.go(-1);
     },
   },
   created() {
-    this.fetchRunner(this.$route.params.id);
+    this.fetchplayer(this.$route.params.id);
     this.fetchRecord(this.$route.params.id);
   },
 };
@@ -145,7 +164,8 @@ export default {
 
 
 <style scoped>
-.detail {
+.playerDetail {
+  text-align: center;
   float: left;
   position: relative;
   width: 80%;

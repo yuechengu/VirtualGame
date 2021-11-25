@@ -4,8 +4,8 @@
       "name": "杭浩岚",
       "gender": "男",
       "age": 29,
-      "speed": 45,
-      "weight": 55,
+      "averageSpeed": 45,
+      "addWeight": 55,
       "gameSpeed": 44,
       "winCount": 3,
       "id": 1
@@ -14,8 +14,8 @@
       "name": "冉雅静",
       "gender": "男",
       "age": 31,
-      "speed": 45,
-      "weight": 54,
+      "averageSpeed": 45,
+      "addWeight": 54,
       "gameSpeed": 44,
       "winCount": 3,
       "id": 2
@@ -24,8 +24,8 @@
       "name": "道良畴",
       "gender": "男",
       "age": 11,
-      "speed": 45,
-      "weight": 35,
+      "averageSpeed": 45,
+      "addWeight": 35,
       "gameSpeed": 44,
       "winCount": 3,
       "id": 3
@@ -34,8 +34,8 @@
       "name": "庚雅美",
       "gender": "女",
       "age": 29,
-      "speed": 45,
-      "weight": 55,
+      "averageSpeed": 45,
+      "addWeight": 55,
       "gameSpeed": 44,
       "winCount": 3,
       "id": 5
@@ -44,8 +44,8 @@
       "name": "王宝强",
       "gender": "女",
       "age": 35,
-      "speed": 30,
-      "weight": 30,
+      "averageSpeed": 30,
+      "addWeight": 30,
       "gameSpeed": 44,
       "winCount": 3,
       "id": 6
@@ -54,11 +54,31 @@
       "name": "王一",
       "gender": "男",
       "age": 60,
-      "speed": 50,
-      "weight": 30,
+      "averageSpeed": 50,
+      "addWeight": 30,
       "gameSpeed": 44,
       "winCount": 3,
       "id": 7
+    },
+    {
+      "name": "张四",
+      "gender": "女",
+      "age": 77,
+      "averageSpeed": 20,
+      "addWeight": 40,
+      "gameSpeed": 0,
+      "winCount": 0,
+      "id": 8
+    },
+    {
+      "name": "张阿森纳",
+      "gender": "男",
+      "age": 46,
+      "averageSpeed": 40,
+      "addWeight": 40,
+      "gameSpeed": 0,
+      "winCount": 0,
+      "id": 10
     }
   ],
   "maps": [
@@ -75,112 +95,84 @@
       "mapName": "go-to-shanghai"
     }
   ],
-  "runnerRecord": [
+  "playerRecord": [
     {
-      "recordId": 1,
+      "id": 1,
       "playerId": 1,
-      "gameId": 1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 1,
       "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
     },
     {
-      "recordId": 2,
+      "id": 2,
       "playerId": 2,
-      "gameId": 1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 2,
       "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
     },
     {
-      "recordId": 3,
+      "id": 3,
       "playerId": 3,
-      "gameId": 1,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-shanghai",
       "league": 3,
       "gameSpeed": 40,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
     },
     {
-      "recordId": 4,
-      "playerId": 4,
-      "gameId": 1,
-      "dateOfGame": "2021/11/10",
-      "gameMapName": "go-to-shanghai",
-      "league": 4,
-      "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
-    },
-    {
-      "recordId": 5,
+      "id": 5,
       "playerId": 1,
-      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 1,
       "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
     },
     {
-      "recordId": 6,
+      "id": 6,
       "playerId": 2,
-      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 2,
       "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
     },
     {
-      "recordId": 7,
+      "id": 7,
       "playerId": 3,
-      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 3,
       "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
     },
     {
-      "recordId": 8,
-      "playerId": 4,
-      "gameId": 2,
-      "dateOfGame": "2021/11/10",
-      "gameMapName": "go-to-tokyo",
-      "league": 4,
-      "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
-    },
-    {
-      "recordId": 9,
+      "id": 9,
       "playerId": 5,
-      "gameId": 2,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-tokyo",
       "league": 5,
       "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
     },
     {
-      "recordId": 10,
+      "id": 10,
       "playerId": 1,
-      "gameId": 3,
       "dateOfGame": "2021/11/10",
       "gameMapName": "go-to-sapporo",
       "league": 1,
       "gameSpeed": 44,
-      "commentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
+      "gameCommentary": "我叫张三，今年31岁，是一个体重只有5KG的人，今天我参加了一场由埃森哲举办的上海马拉松比赛，比赛开始了，我第一个冲在了最前面，然后我摔倒了，瞬间速度慢了下来，"
     }
   ],
   "games": [
     {
       "gameName": "检垃圾大赛",
-      "runnerSelected": [
+      "playerSelected": [
         1,
         2,
         3
@@ -190,7 +182,7 @@
     },
     {
       "gameName": "2",
-      "runnerSelected": [
+      "playerSelected": [
         1,
         2,
         3
@@ -200,7 +192,7 @@
     },
     {
       "gamename": "",
-      "runnerSelected": [
+      "playerSelected": [
         2,
         3
       ],
@@ -210,7 +202,7 @@
     },
     {
       "gamename": "",
-      "runnerSelected": [
+      "playerSelected": [
         1,
         2
       ],
@@ -220,7 +212,7 @@
     },
     {
       "gamename": "",
-      "runnerSelected": [
+      "playerSelected": [
         2,
         5
       ],
@@ -230,7 +222,7 @@
     },
     {
       "gamename": "",
-      "runnerSelected": [
+      "playerSelected": [
         1,
         3,
         5

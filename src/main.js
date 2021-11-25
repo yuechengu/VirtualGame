@@ -9,9 +9,6 @@ import axios from 'axios'
 Vue.prototype.$axios=axios
 axios.defaults.baseURL = '/api' // 开发本地代理
 axios.defaults.headers.post['Contenst-Type'] = 'application/json;'
-//qs引用
-// import qs from "qs"
-// Vue.prototype.$qs=qs
 // 导入element ui布局系统
 import VueResource from 'vue-resource' 
 import ElementUI from 'element-ui'
@@ -34,14 +31,3 @@ new Vue({
   //将上面声明的路由器传递到根Vue实例
   router
 }).$mount('#app')//将这个实例挂载到id=app的根元素上
-
-/*
-STEP1: 首先我们从node模块中导入了vue模块，
-接着我们又导入了App模块(这个是本地定义的模块)。
-
-STEP2: 这个App模块是我们在用vue cli脚手架创建这个项目的时候默认帮我们创建的，
-作为我们整个项目的根模块。
-
-STEP3: 之后，我们导入了vue-router,
-接着我们使用vue的静态方法Vue.use，告诉vue我们将使用vue-router这个组件。
-*/

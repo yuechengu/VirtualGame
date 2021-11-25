@@ -13,7 +13,7 @@
       <el-table-column prop="playerId" label="参赛人ID"> </el-table-column>
       <el-table-column prop="league" label="排名"> </el-table-column>
       <el-table-column prop="gameSpeed" label="比赛中速度"> </el-table-column>
-      <el-table-column prop="commentary" label="比赛描述"> </el-table-column>
+      <el-table-column prop="gameCommentary" label="比赛描述"> </el-table-column>
     </el-table>
     <br /><br />
     <el-row>
