@@ -2,7 +2,7 @@
   <!-- 此处有个 default-active 属性需要注意，是用来设置菜单的选中样式，我们需要根据当前路由情况来选中 -->
   <el-menu 
     :collapse="isMenuCollapse"
-    :default-openeds="['0', '1']"
+    :default-openeds="['0', '1', '2']"
     :default-active="activeIndex"
     class="el-menu-vertical-demo"
     background-color="#545c64"
@@ -42,7 +42,7 @@
       <!-- 只有单个父菜单的时候，也要给这个父菜单添加路由，同样的 to 指向要去的地方 -->
       <router-link v-else :index="menu.index" :key="menu.index" tag="div" :to="{name: menu.routerName}">
         <!-- 没子菜单的时候，就用 el-menu-item，也要绑个序号 index -->
-        <el-menu-item>
+        <el-menu-item style="outline: 1px solid #545c64">
           <!-- 绑个父菜单的 icon -->
           <i :class="menu.icon"></i>
           <!-- 再绑个父菜单的名称 text -->
@@ -58,10 +58,15 @@
 // routerName 为对应的路由的路由名称
 const menus = [
   {
-    text: "查询模块", // 父菜单名字
-    icon: "el-icon-search", // 父菜单图标
-    subMenus: [{ text: "运动员查询", routerName: 'QueryGameScore' }]  // 子菜单列表
-  },
+    text: "主页", 
+    icon: "el-icon-house", 
+    routerName: 'Home' 
+  },  
+  {
+    text: "查询模块", 
+    icon: "el-icon-search", 
+    subMenus: [{ text: "运动员查询", routerName: 'QueryGameScore' }] 
+  },  
   {
     text: "比赛模块",
     icon: "el-icon-menu",
@@ -124,5 +129,6 @@ export default {
 <style>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 250px;
+  min-height: 400px;
 }
 </style>        
