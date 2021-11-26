@@ -108,43 +108,19 @@ export default {
   methods: {
     //根据点击详细的id返回运动员的详细信息
     fetchplayer(id) {
-      /*
-      this.$http
-        .get("http://localhost:3000/players/" + id)
-        .then(function (response) {
-          this.player = response.body;
-        });
-      */
-      this.$axios.get("/players/" + id).then((result) => {
+      this.$api.playerService.IDfindPlayer(id).then((result) => {
         this.player = result.data;
       });
     },
     //根据运动员的id筛选出运动员的参赛记录
     fetchRecord(id) {
-      /*
-      this.$http
-        .get("http://localhost:3000/playerRecord?playerId=" + id)
-        .then(function (response) {
-          this.records = response.body;
-        });
-      */
-      this.$axios.get("/playerRecord?playerId=" + id).then((result) => {
+      this.$api.gameResultService.participaterInfo(id).then((result) => {
         this.records = result.data;
       });
     },
     //根据运动的id删除相应的运动员
     deleteplayer(id) {
-      /*
-      this.$http
-        .delete("http://localhost:3000/players/" + id)
-        .then(function (response) {
-          this.$router.push({
-            path: "/queryGameScore",
-            query: { alert: "运动员删除成功" },
-          });
-        });
-      */
-      this.$axios.delete("/players/" + id).then((result) => {
+      this.$api.playerService.deletePlayer(id).then((result) => {
         this.$router.push({
           path: "/queryGameScore",
           query: { alert: "运动员删除成功" },

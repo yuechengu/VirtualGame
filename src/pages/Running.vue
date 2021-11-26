@@ -105,8 +105,7 @@ export default {
         //控制台看一下提交的表单
         console.log(JSON.stringify(this.form));
         //发出post请求
-        this.$axios
-          .post("/sports/running", JSON.stringify(this.form))
+        this.$api.gameService.startBy(this.form)
           .then((result) => {
             console.log("This request succeeded! Here is the response of running:");          
             //控制台看一下返回的表单
@@ -129,27 +128,13 @@ export default {
     },
     //加载运动员
     fetchplayers() {
-      /*vue-resource实现
-      this.$http.get("http://localhost:3000/players").then(function (response) {
-        console.log(
-          "This request succeeded! Here is the response for players:"
-        );
-        this.playerOptions = response.body;
-      });
-      */
-      this.$axios.get("/players").then((result) => {
+      this.$api.playerService.playerList().then((result) => {
         this.playerOptions = result.data;
-      });
+      });;
     },
     //加载地图
     fetchMaps() {
-      /*vue-resource办法实现
-         this.$http.get("http://localhost:3000/maps").then(function (response) {
-         console.log("This request succeeded! Here is the response for maps:");
-         this.mapOptions = response.body;
-       });
-      */
-      this.$axios.get("/maps").then((result) => {
+      this.$api.mapService.mapList().then((result) => {
         this.mapOptions = result.data;
       });
     },
