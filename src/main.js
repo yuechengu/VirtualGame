@@ -4,13 +4,14 @@ import Vue from 'vue'
 import App from './App'
 //引用本地@router/index.js
 import router from '@/router/index.js'
-//全局样式
-import './assets/css/all.css'
 //axios接口引用
 import axios from 'axios'
-Vue.prototype.$axios=axios
-axios.defaults.baseURL = '/api' // 开发本地代理
-axios.defaults.headers.post['Contenst-Type'] = 'application/json;'
+//导入api接口
+import api from './api'
+//将api挂载到vue的原型上
+Vue.prototype.$api = api; 
+//全局样式
+import './assets/css/all.css'
 // 导入element ui布局系统
 import VueResource from 'vue-resource' 
 import ElementUI from 'element-ui'
@@ -28,15 +29,3 @@ new Vue({
   router, // 传入路由能力
   render: h => h(App)
 });
-
-//实例化Vue
-// new Vue({
-//   //定义Vue绑定的根元素，是指最外面的index.html的<div id="app"></div>到时候将会被替换
-//   el: '#app',
-//   //用<App/>代替根元素
-//   template: '<App/>',
-//   //声明App组件，这样上面的<App/>元素就可以生效
-//   components: { App },
-//   //将上面声明的路由器传递到根Vue实例
-//   router
-// }).$mount('#app')//将这个实例挂载到id=app的根元素上

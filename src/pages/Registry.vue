@@ -60,8 +60,6 @@ export default {
           type: "error",
         });
       } else {
-        //※要改
-        //这个地方需要调用后台接口，目前阶段是直接注入前端的mock数据
         let newPlayer = {
           name: this.player.name,
           gender: this.player.gender,
@@ -71,21 +69,9 @@ export default {
           gameSpeed: 0,
           winCount: 0,
         };
-        /*vue-resource实现
-        this.$http
-          .post("http://localhost:3000/players", newPlayer)
-          .then(function (response) {
-            //※要改
-            //这个地方需要后台返回初始的比赛速度等，目前只返回msg
-            this.$refs[FormName].resetFields();
-            this.$message({
-              showClose: true,
-              message: "成功插入信息",
-              type: "success",
-            });
-          });
-      */
-        this.$axios.post("/players", newPlayer).then((result) => {
+        //※要改
+        //这个地方后台接口返回msg形式不是这样的
+        this.$api.playerService.insertPlayer(newPlayer).then((result) => {
           console.log("The post successs");
           this.$refs[FormName].resetFields();
           this.$message({

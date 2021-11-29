@@ -62,12 +62,7 @@ export default {
   },
   methods: {
     fetchplayerAll() {
-      /*vue-resource实现
-      this.$http.get("http://localhost:3000/players").then(function (response) {
-        this.players = response.body;
-      });
-      */
-      this.$axios.get("/players").then((result) => {
+      this.$api.playerService.playerList().then((result) => {
         this.playerAll = result.data;
       });
     },
