@@ -11,20 +11,26 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      // //axios跨域改造
+      /**
+       * 跨域改造支持多个后端提供的服务；
+       * 每个本地代理服务名，对应各自第三方接口URL地址。
+       * 注释掉的内容为，预想的后台api接口；后台调试时，请放开注释。
+       * 目前使用的是前端mock接口，仅前端自己调试用；后台调试时，请注释掉。
+       */
+
       // '/api': {
-      //   target: 'http://localhost:8083/api', // 请求的第三方接口
-      //   changeOrigin: true, // 在本地会创建一个虚拟服务端，然后发送请求的数据，并同时接收请求的数据，这样服务端和服务端进行数据的交互就不会有跨域问题
+      //   target: 'http://localhost:8083/api', //请求的第三方接口URL
+      //   changeOrigin: true, 
       //   secure: true,
-      //   pathRewrite:{  // 路径重写
-      //     '^/api': ''  // 替换target中的请求地址，也就是说/api=/target，请求target这个地址的时候直接写成/api即可。
+      //   pathRewrite:{  
+      //     '^/api': '' 
       //   }
       // },
       
-      //mock跨域改造
+      // 前端mock接口
       '/api':{
         target: 'http://localhost:3000',//请求的mock接口
-        changeOrigin: true,// 在本地会创建一个虚拟服务端，然后发送请求的数据，并同时接收请求的数据，这样服务端和服务端进行数据的交互就不会有跨域问题
+        changeOrigin: true,//在本地会创建一个虚拟服务端，然后发送请求的数据，并同时接收请求的数据，这样服务端和服务端进行数据的交互就不会有跨域问题
         secure: true,
         pathRewrite:{
           '^/api':''
