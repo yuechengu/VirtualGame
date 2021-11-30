@@ -3,11 +3,9 @@
  */
 
 //axios接口引用
-import axios from "axios";
-axios.defaults.baseURL = "/api"; // 开发本地代理
-axios.defaults.headers.post["Contenst-Type"] = "application/json;";
-// 导入接口域名列表
-import base from "./base";
+import axios from '@/utils/http';
+//导入接口域名列表
+import base from './base';
 
 const playerService = {
   // 查找所有运动员
@@ -18,14 +16,15 @@ const playerService = {
   insertPlayer(params) {
     return axios.post(`${base.insertPlayer}`, params);
   },
+  // NG
   // 通过ID查找一个运动员
-  // ※这里最好调用后端的 IDfindPlayer(int ID)
-  IDfindPlayer(params) {
-    return axios.get(`${base.searchAllPlayer}/${params}`);
+  IDfindPlayer(param) {
+    return axios.get(`${base.IDfindPlayer}`, {params: param});
   },
+  // NG
   // 删除一个运动员
-  deletePlayer(params) {
-    return axios.delete(`${base.deletePlayer}/${params}`);
+  deletePlayer(param) {
+    return axios.delete(`${base.deletePlayer}`, {data: param});
   },
 };
 

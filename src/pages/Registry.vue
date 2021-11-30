@@ -23,7 +23,7 @@
       <el-form-item label="基础负重" prop="addWeight"
         ><br />
         <el-slider v-model="player.addWeight" :step="10" show-stops> </el-slider>
-      </el-form-item>
+      </el-form-item>  
     </el-form>
 
     <br /><br />
@@ -69,16 +69,23 @@ export default {
           gameSpeed: 0,
           winCount: 0,
         };
-        //※要改
-        //这个地方后台接口返回msg形式不是这样的
+        //插入新用户
         this.$api.playerService.insertPlayer(newPlayer).then((result) => {
-          console.log("The post successs");
           this.$refs[FormName].resetFields();
-          this.$message({
-            showClose: true,
-            message: "成功插入信息",
-            type: "success",
-          });
+          if(result.data == true){
+            this.$message({
+              showClose: true,
+              message: "成功插入信息",
+              type: "success",
+            });
+          } else{
+            this.$message({
+              showClose: true,
+              message: "插入信息失败",
+              type: "warning",
+            });            
+          }
+
         });
       }
     },

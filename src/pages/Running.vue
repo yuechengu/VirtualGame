@@ -29,10 +29,10 @@
           style="width: 100%"
         >
           <el-option
-            v-for="item in mapOptions"
-            :key="item.mapId"
-            :label="item.mapName"
-            :value="item.mapName"
+            v-for="(val, key) in this.mapOptions"
+            :key="key"
+            :label="val"
+            :value="val"
           >
           </el-option>
         </el-select>
@@ -74,7 +74,7 @@ export default {
       //加载的选手
       playerOptions: [],
       //加载的地图
-      mapOptions: [],
+      mapOptions: {},
       //表单
       form: {
         mapName: "",

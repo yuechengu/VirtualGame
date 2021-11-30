@@ -106,24 +106,28 @@ export default {
     };
   },
   methods: {
+    //NG
     //根据点击详细的id返回运动员的详细信息
     fetchplayer(id) {
       this.$api.playerService.IDfindPlayer(id).then((result) => {
         this.player = result.data;
       });
     },
+    //NG
     //根据运动员的id筛选出运动员的参赛记录
     fetchRecord(id) {
       this.$api.gameResultService.participaterInfo(id).then((result) => {
         this.records = result.data;
       });
     },
+    //NG
     //根据运动的id删除相应的运动员
     deleteplayer(id) {
       this.$api.playerService.deletePlayer(id).then((result) => {
+        console.log(result);
         this.$router.push({
           path: "/queryGameScore",
-          query: { alert: "运动员删除成功" },
+          query: { alert: "选手删除成功" },
         });
       });
     },
