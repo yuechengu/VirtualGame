@@ -5,7 +5,7 @@ import App from './App'
 //引用本地@router/index.js
 import router from '@/router/index.js'
 //axios接口引用
-import axios from 'axios'
+import axios from '@/utils/http'
 //导入api接口
 import api from './api'
 //将api挂载到vue的原型上

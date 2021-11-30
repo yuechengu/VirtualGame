@@ -18,8 +18,19 @@ module.exports = {
        * 目前使用的是前端mock接口，仅前端自己调试用；后台调试时，请注释掉。
        */
 
-      // '/api': {
-      //   target: 'http://localhost:8083/api', //请求的第三方接口URL
+      // 李少辰提供的服务
+      '/lishaochenService': {
+        target: 'http://localhost:8090',
+        changeOrigin: true, 
+        secure: true,
+        pathRewrite:{  
+          '^/lishaochenService': '' 
+        }
+      },      
+
+      // // 李曦提供的服务
+      // '/lixiService': {
+      //   target: 'http://localhost:8083/api',
       //   changeOrigin: true, 
       //   secure: true,
       //   pathRewrite:{  
@@ -27,15 +38,15 @@ module.exports = {
       //   }
       // },
       
-      // 前端mock接口
-      '/api':{
-        target: 'http://localhost:3000',//请求的mock接口
-        changeOrigin: true,//在本地会创建一个虚拟服务端，然后发送请求的数据，并同时接收请求的数据，这样服务端和服务端进行数据的交互就不会有跨域问题
-        secure: true,
-        pathRewrite:{
-          '^/api':''
-        }
-      }
+      // // 前端mock接口
+      // '/mockService':{
+      //   target: 'http://localhost:3000',//请求的mock端口
+      //   changeOrigin: true,
+      //   secure: true,
+      //   pathRewrite:{
+      //     '^/mockService':''
+      //   }
+      // }
     },
 
     // Various Dev Server settings

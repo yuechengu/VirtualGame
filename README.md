@@ -46,6 +46,8 @@ npm run build
 ## 后端调试接口步骤
 ```bash
 1. `config/index.js` 修改proxyTable中的代理服务名和对应请求URL；
-2. `src/api` 修改各服务对应的.js文件中的本地代理URL（如playerService.js中`axios.defaults.baseURL = "/api";` ）；
-3. `src/api/base.js` 修改各服务接口提供者的接口域名。
+
+2. `utils/http.js` 修改axios的本地代理URL（如`baseURL: '/lishaochenService'`）；
+
+3. `src/api/base.js` 修改各服务接口提供者的接口域名（如`searchAllMap: "/mapandevent/queryallmap",`）。
 ```
