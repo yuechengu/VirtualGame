@@ -45,7 +45,7 @@ npm run build
 
 ## 后端调试接口步骤
 ```bash
-1. `config/index.js` 修改proxyTable中的代理服务名和对应请求URL；
+1. `config/index.js` 修改proxyTable中的代理服务名和对应请求URL（如`'/lishaochenService'`）；
 
 2. `utils/http.js` 修改axios的本地代理URL（如`baseURL: '/lishaochenService'`）；
 

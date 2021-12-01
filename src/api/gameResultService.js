@@ -9,7 +9,7 @@ import base from "./base";
 
 const gameResultService = {
   participaterInfo(param) {
-    return axios.get(`${base.searchGameResult}`, {params: param});
+    return axios.get(`${base.searchGameResult}`, {params: {id: param}});
   }
 };
 
