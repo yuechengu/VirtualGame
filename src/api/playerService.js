@@ -19,12 +19,12 @@ const playerService = {
   // NG
   // 通过ID查找一个运动员
   IDfindPlayer(param) {
-    return axios.get(`${base.IDfindPlayer}`, {params: param});
+    return axios.get(`${base.IDfindPlayer}`, {params: {id: param}});
   },
   // NG
   // 删除一个运动员
   deletePlayer(param) {
-    return axios.delete(`${base.deletePlayer}`, {data: param});
+    return axios.delete(`${base.deletePlayer}`, {params: {id: param}});
   },
 };
 
