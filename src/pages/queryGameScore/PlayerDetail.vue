@@ -52,7 +52,7 @@
           <i class="el-icon-s-goods"></i>
           基础负重
         </template>
-        {{ player.addWeight }}
+        {{ player.addedWeight }}
       </el-descriptions-item> 
     </el-descriptions><br />
 
@@ -125,10 +125,17 @@ export default {
     deleteplayer(id) {
       this.$api.playerService.deletePlayer(id).then((result) => {
         console.log(result);
-        this.$router.push({
-          path: "/queryGameScore",
-          query: { alert: "选手删除成功" },
-        });
+        if (result){
+          this.$router.push({
+            path: "/queryGameScore",
+            query: { alert: "选手删除成功" },
+          });          
+        }else{
+          this.$router.push({
+            path: "/queryGameScore",
+            query: { alert: "选手删除失败" },
+          });          
+        }
       });
     },
     backToSearch() {

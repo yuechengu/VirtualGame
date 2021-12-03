@@ -5,9 +5,9 @@
 const base = {
   //运动员管理（lsc提供）
   searchAllPlayer: '/player/queryplayer',//OK
-  IDfindPlayer: 'player/IDfindplayer',//※NG
+  IDfindPlayer: 'player/IDfindplayer',//OK
   insertPlayer: '/player/insertplayer',//OK
-  deletePlayer: '/player/deleteplayer',//※NG
+  deletePlayer: '/player/deleteplayer',//OK
   //地图管理（lsc提供）
   searchAllMap: '/mapandevent/queryallmap',//OK
   //比赛结果管理（lsc提供）
