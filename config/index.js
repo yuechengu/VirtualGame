@@ -14,8 +14,6 @@ module.exports = {
       /**
        * 跨域改造支持多个后端提供的服务；
        * 每个本地代理服务名，对应各自第三方接口URL地址。
-       * 注释掉的内容为，预想的后台api接口；后台调试时，请放开注释。
-       * 目前使用的是前端mock接口，仅前端自己调试用；后台调试时，请注释掉。
        */
 
       // 李少辰提供的服务
@@ -28,25 +26,25 @@ module.exports = {
         }
       },      
 
-      // // 李曦提供的服务
-      // '/lixiService': {
-      //   target: 'http://localhost:8083/api',
-      //   changeOrigin: true, 
-      //   secure: true,
-      //   pathRewrite:{  
-      //     '^/api': '' 
-      //   }
-      // },
+      // 李曦提供的服务
+      '/lixiService': {
+        target: 'http://localhost:8083/api',
+        changeOrigin: true, 
+        secure: true,
+        pathRewrite:{  
+          '^/api': '' 
+        }
+      },
       
-      // // 前端mock接口
-      // '/mockService':{
-      //   target: 'http://localhost:3000',//请求的mock端口
-      //   changeOrigin: true,
-      //   secure: true,
-      //   pathRewrite:{
-      //     '^/mockService':''
-      //   }
-      // }
+      // 前端mock接口
+      '/mockService':{
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        secure: true,
+        pathRewrite:{
+          '^/mockService':''
+        }
+      }
     },
 
     // Various Dev Server settings

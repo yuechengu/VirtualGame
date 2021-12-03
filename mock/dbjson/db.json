@@ -81,20 +81,12 @@
       "id": 10
     }
   ],
-  "maps": [
+  "map": 
     {
-      "mapId": 1,
-      "mapName": "go-to-turkey"
+    "1": "go-to-turkey",
+    "2": "go-to-africa",
+    "3": "go-to-shanghai"
     },
-    {
-      "mapId": 2,
-      "mapName": "go-to-africa"
-    },
-    {
-      "mapId": 3,
-      "mapName": "go-to-shanghai"
-    }
-  ],
   "playerRecord": [
     {
       "id": 1,

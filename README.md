@@ -47,7 +47,5 @@ npm run build
 ```bash
 1. `config/index.js` 修改proxyTable中的代理服务名和对应请求URL（如`'/lishaochenService'`）；
 
-2. `utils/http.js` 修改axios的本地代理URL（如`baseURL: '/lishaochenService'`）；
-
-3. `src/api/base.js` 修改各服务接口提供者的接口域名（如`searchAllMap: "/mapandevent/queryallmap",`）。
+2. `src/api/base.js` 修改各服务接口提供者的接口域名（如`searchAllMap: "/lishaochenService/mapandevent/queryallmap",`）。
 ```
