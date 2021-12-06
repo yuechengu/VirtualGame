@@ -18,7 +18,7 @@ module.exports = {
 
       // 李少辰提供的服务
       '/lishaochenService': {
-        target: 'http://localhost:8090',
+        target: 'http://localhost:8091',
         changeOrigin: true, 
         secure: true,
         pathRewrite:{  
