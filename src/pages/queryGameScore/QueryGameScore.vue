@@ -24,7 +24,7 @@
       <el-table-column prop="age" label="年龄" sortable> </el-table-column>
       <el-table-column prop="averageSpeed" label="比赛速度" sortable>
       </el-table-column>
-      <el-table-column prop="winCount" label="获胜次数" sortable>
+      <el-table-column prop="wincount" label="获胜次数" sortable>
       </el-table-column>
       <!-- 目前的操作，只提供查看功能，后续会增加编辑功能 -->
       <el-table-column fixed="right" label="操作" width="100">
@@ -51,10 +51,11 @@ export default {
         玩家ID: "id",
         玩家姓名: "name",
         性别: "gender",
-        速度: "averageSpeed",
-        负重: "addWeight",
-        比赛速度: "gameSpeed",
-        获胜次数: "winCount",
+        比赛速度: "averageSpeed",
+        负重: "addedWeight",
+        最大速度: "maxSpeed",
+        最小速度: "minSpeed",
+        获胜次数: "wincount",
       },
       alert: "",
       filterInput: "",
