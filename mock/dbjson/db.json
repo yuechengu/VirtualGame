@@ -7,7 +7,7 @@
       "averageSpeed": 45,
       "addWeight": 55,
       "gameSpeed": 44,
-      "winCount": 3,
+      "wincount": 3,
       "id": 1
     },
     {
@@ -17,7 +17,7 @@
       "averageSpeed": 45,
       "addWeight": 54,
       "gameSpeed": 44,
-      "winCount": 3,
+      "wincount": 3,
       "id": 2
     },
     {
@@ -27,7 +27,7 @@
       "averageSpeed": 45,
       "addWeight": 35,
       "gameSpeed": 44,
-      "winCount": 3,
+      "wincount": 3,
       "id": 3
     },
     {
@@ -37,7 +37,7 @@
       "averageSpeed": 45,
       "addWeight": 55,
       "gameSpeed": 44,
-      "winCount": 3,
+      "wincount": 3,
       "id": 5
     },
     {
@@ -47,7 +47,7 @@
       "averageSpeed": 30,
       "addWeight": 30,
       "gameSpeed": 44,
-      "winCount": 3,
+      "wincount": 3,
       "id": 6
     },
     {
@@ -57,7 +57,7 @@
       "averageSpeed": 50,
       "addWeight": 30,
       "gameSpeed": 44,
-      "winCount": 3,
+      "wincount": 3,
       "id": 7
     },
     {
@@ -67,7 +67,7 @@
       "averageSpeed": 20,
       "addWeight": 40,
       "gameSpeed": 0,
-      "winCount": 0,
+      "wincount": 0,
       "id": 8
     },
     {
@@ -77,7 +77,7 @@
       "averageSpeed": 40,
       "addWeight": 40,
       "gameSpeed": 0,
-      "winCount": 0,
+      "wincount": 0,
       "id": 10
     }
   ],

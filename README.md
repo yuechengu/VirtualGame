@@ -6,14 +6,6 @@
 # 安装依赖
 npm install
 
-# 在实施导入之前需要先行安装相关的插件
-npm install vue-cli -g
-npm install vue-resource
-npm install vue-router
-npm install element-ui -S
-npm install -g json-server 
-npm install vue-json-excel 
-
 # 服务运行端口localhost:8081
 npm start
 
