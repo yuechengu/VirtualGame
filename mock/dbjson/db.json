@@ -71,12 +71,11 @@
       "id": 8
     }
   ],
-  "map": 
-    {
+  "map": {
     "1": "go-to-turkey",
     "2": "go-to-africa",
     "3": "go-to-shanghai"
-    },
+  },
   "playerRecord": [
     {
       "id": 1,
@@ -212,6 +211,1102 @@
       "mapSelected": 1,
       "gameName": "某比赛",
       "id": 6
+    }
+  ],
+  "playerProDetails": [
+    {
+      "id": 1,
+      "processSec": 0,
+      "playerName": "张三",
+      "processPer": 0,
+      "processMsg": "我叫张三，我参赛啦"
+    },
+    {
+      "id": 2,
+      "processSec": 1,
+      "playerName": "张三",
+      "processPer": 2,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 3,
+      "processSec": 2,
+      "playerName": "张三",
+      "processPer": 4,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 4,
+      "processSec": 3,
+      "playerName": "张三",
+      "processPer": 6,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 5,
+      "processSec": 4,
+      "playerName": "张三",
+      "processPer": 8,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 6,
+      "processSec": 5,
+      "playerName": "张三",
+      "processPer": 10,
+      "processMsg": "遇见了老虎，我开始装死"
+    },
+    {
+      "id": 7,
+      "processSec": 6,
+      "playerName": "张三",
+      "processPer": 10,
+      "processMsg": "装死中"
+    },
+    {
+      "id": 8,
+      "processSec": 7,
+      "playerName": "张三",
+      "processPer": 10,
+      "processMsg": "装死中"
+    },
+    {
+      "id": 9,
+      "processSec": 8,
+      "playerName": "张三",
+      "processPer": 10,
+      "processMsg": "装死中"
+    },
+    {
+      "id": 10,
+      "processSec": 9,
+      "playerName": "张三",
+      "processPer": 10,
+      "processMsg": "装死中"
+    },
+    {
+      "id": 11,
+      "processSec": 10,
+      "playerName": "张三",
+      "processPer": 10,
+      "processMsg": "老虎终于走了，我加速跑了起来"
+    },
+    {
+      "id": 12,
+      "processSec": 11,
+      "playerName": "张三",
+      "processPer": 13,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 13,
+      "processSec": 12,
+      "playerName": "张三",
+      "processPer": 16,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 14,
+      "processSec": 13,
+      "playerName": "张三",
+      "processPer": 19,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 15,
+      "processSec": 14,
+      "playerName": "张三",
+      "processPer": 22,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 16,
+      "processSec": 15,
+      "playerName": "张三",
+      "processPer": 25,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 17,
+      "processSec": 16,
+      "playerName": "张三",
+      "processPer": 28,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 18,
+      "processSec": 17,
+      "playerName": "张三",
+      "processPer": 31,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 19,
+      "processSec": 18,
+      "playerName": "张三",
+      "processPer": 34,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 20,
+      "processSec": 19,
+      "playerName": "张三",
+      "processPer": 37,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 21,
+      "processSec": 20,
+      "playerName": "张三",
+      "processPer": 40,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 22,
+      "processSec": 21,
+      "playerName": "张三",
+      "processPer": 43,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 23,
+      "processSec": 22,
+      "playerName": "张三",
+      "processPer": 46,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 24,
+      "processSec": 23,
+      "playerName": "张三",
+      "processPer": 47,
+      "processMsg": "我累了跑不动了，龟速跑步中"
+    },
+    {
+      "id": 25,
+      "processSec": 24,
+      "playerName": "张三",
+      "processPer": 48,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 26,
+      "processSec": 25,
+      "playerName": "张三",
+      "processPer": 49,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 27,
+      "processSec": 26,
+      "playerName": "张三",
+      "processPer": 50,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 28,
+      "processSec": 27,
+      "playerName": "张三",
+      "processPer": 51,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 29,
+      "processSec": 28,
+      "playerName": "张三",
+      "processPer": 52,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 30,
+      "processSec": 29,
+      "playerName": "张三",
+      "processPer": 53,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 31,
+      "processSec": 30,
+      "playerName": "张三",
+      "processPer": 54,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 32,
+      "processSec": 31,
+      "playerName": "张三",
+      "processPer": 55,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 33,
+      "processSec": 32,
+      "playerName": "张三",
+      "processPer": 56,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 34,
+      "processSec": 33,
+      "playerName": "张三",
+      "processPer": 57,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 35,
+      "processSec": 34,
+      "playerName": "张三",
+      "processPer": 58,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 36,
+      "processSec": 35,
+      "playerName": "张三",
+      "processPer": 59,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 37,
+      "processSec": 36,
+      "playerName": "张三",
+      "processPer": 60,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 38,
+      "processSec": 37,
+      "playerName": "张三",
+      "processPer": 61,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 39,
+      "processSec": 38,
+      "playerName": "张三",
+      "processPer": 62,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 40,
+      "processSec": 39,
+      "playerName": "张三",
+      "processPer": 63,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 41,
+      "processSec": 40,
+      "playerName": "张三",
+      "processPer": 64,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 42,
+      "processSec": 41,
+      "playerName": "张三",
+      "processPer": 65,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 43,
+      "processSec": 42,
+      "playerName": "张三",
+      "processPer": 66,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 44,
+      "processSec": 43,
+      "playerName": "张三",
+      "processPer": 67,
+      "processMsg": "我不累了，速度恢复正常"
+    },
+    {
+      "id": 45,
+      "processSec": 44,
+      "playerName": "张三",
+      "processPer": 69,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 46,
+      "processSec": 45,
+      "playerName": "张三",
+      "processPer": 71,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 47,
+      "processSec": 46,
+      "playerName": "张三",
+      "processPer": 73,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 48,
+      "processSec": 47,
+      "playerName": "张三",
+      "processPer": 75,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 49,
+      "processSec": 48,
+      "playerName": "张三",
+      "processPer": 77,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 50,
+      "processSec": 49,
+      "playerName": "张三",
+      "processPer": 79,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 51,
+      "processSec": 50,
+      "playerName": "张三",
+      "processPer": 81,
+      "processMsg": "有人已经完成了比赛，我荣获第三名"
+    },
+    {
+      "id": 52,
+      "processSec": 0,
+      "playerName": "李四",
+      "processPer": 0,
+      "processMsg": "我叫李四，我参赛啦"
+    },
+    {
+      "id": 53,
+      "processSec": 1,
+      "playerName": "李四",
+      "processPer": 2,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 54,
+      "processSec": 2,
+      "playerName": "李四",
+      "processPer": 4,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 55,
+      "processSec": 3,
+      "playerName": "李四",
+      "processPer": 6,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 56,
+      "processSec": 4,
+      "playerName": "李四",
+      "processPer": 8,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 57,
+      "processSec": 5,
+      "playerName": "李四",
+      "processPer": 10,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 58,
+      "processSec": 6,
+      "playerName": "李四",
+      "processPer": 12,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 59,
+      "processSec": 7,
+      "playerName": "李四",
+      "processPer": 14,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 60,
+      "processSec": 8,
+      "playerName": "李四",
+      "processPer": 16,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 61,
+      "processSec": 9,
+      "playerName": "李四",
+      "processPer": 18,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 62,
+      "processSec": 10,
+      "playerName": "李四",
+      "processPer": 20,
+      "processMsg": "我捡到了加速鞋，效果持续十秒"
+    },
+    {
+      "id": 63,
+      "processSec": 11,
+      "playerName": "李四",
+      "processPer": 24,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 64,
+      "processSec": 12,
+      "playerName": "李四",
+      "processPer": 28,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 65,
+      "processSec": 13,
+      "playerName": "李四",
+      "processPer": 32,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 66,
+      "processSec": 14,
+      "playerName": "李四",
+      "processPer": 36,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 67,
+      "processSec": 15,
+      "playerName": "李四",
+      "processPer": 40,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 68,
+      "processSec": 16,
+      "playerName": "李四",
+      "processPer": 44,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 69,
+      "processSec": 17,
+      "playerName": "李四",
+      "processPer": 48,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 70,
+      "processSec": 18,
+      "playerName": "李四",
+      "processPer": 52,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 71,
+      "processSec": 19,
+      "playerName": "李四",
+      "processPer": 56,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 72,
+      "processSec": 20,
+      "playerName": "李四",
+      "processPer": 60,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 73,
+      "processSec": 21,
+      "playerName": "李四",
+      "processPer": 62,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 74,
+      "processSec": 22,
+      "playerName": "李四",
+      "processPer": 64,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 75,
+      "processSec": 23,
+      "playerName": "李四",
+      "processPer": 66,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 76,
+      "processSec": 24,
+      "playerName": "李四",
+      "processPer": 68,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 77,
+      "processSec": 25,
+      "playerName": "李四",
+      "processPer": 70,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 78,
+      "processSec": 26,
+      "playerName": "李四",
+      "processPer": 72,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 79,
+      "processSec": 27,
+      "playerName": "李四",
+      "processPer": 74,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 80,
+      "processSec": 28,
+      "playerName": "李四",
+      "processPer": 76,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 81,
+      "processSec": 29,
+      "playerName": "李四",
+      "processPer": 78,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 82,
+      "processSec": 30,
+      "playerName": "李四",
+      "processPer": 80,
+      "processMsg": "我捡到了黄金，不舍得扔掉，速度-1"
+    },
+    {
+      "id": 83,
+      "processSec": 31,
+      "playerName": "李四",
+      "processPer": 81,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 84,
+      "processSec": 32,
+      "playerName": "李四",
+      "processPer": 82,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 85,
+      "processSec": 33,
+      "playerName": "李四",
+      "processPer": 83,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 86,
+      "processSec": 34,
+      "playerName": "李四",
+      "processPer": 84,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 87,
+      "processSec": 35,
+      "playerName": "李四",
+      "processPer": 85,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 88,
+      "processSec": 36,
+      "playerName": "李四",
+      "processPer": 86,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 89,
+      "processSec": 37,
+      "playerName": "李四",
+      "processPer": 87,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 90,
+      "processSec": 38,
+      "playerName": "李四",
+      "processPer": 88,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 91,
+      "processSec": 39,
+      "playerName": "李四",
+      "processPer": 89,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 92,
+      "processSec": 40,
+      "playerName": "李四",
+      "processPer": 90,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 93,
+      "processSec": 41,
+      "playerName": "李四",
+      "processPer": 91,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 94,
+      "processSec": 42,
+      "playerName": "李四",
+      "processPer": 92,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 95,
+      "processSec": 43,
+      "playerName": "李四",
+      "processPer": 93,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 96,
+      "processSec": 44,
+      "playerName": "李四",
+      "processPer": 94,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 97,
+      "processSec": 45,
+      "playerName": "李四",
+      "processPer": 95,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 98,
+      "processSec": 46,
+      "playerName": "李四",
+      "processPer": 96,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 99,
+      "processSec": 47,
+      "playerName": "李四",
+      "processPer": 97,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 100,
+      "processSec": 48,
+      "playerName": "李四",
+      "processPer": 98,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 101,
+      "processSec": 49,
+      "playerName": "李四",
+      "processPer": 99,
+      "processMsg": "龟速跑步中"
+    },
+    {
+      "id": 102,
+      "processSec": 50,
+      "playerName": "李四",
+      "processPer": 100,
+      "processMsg": "我完成了比赛，获得了第一名，还得到了黄金，我真是太棒啦"
+    },
+    {
+      "id": 103,
+      "processSec": 0,
+      "playerName": "王五",
+      "processPer": 0,
+      "processMsg": "我叫王五，我参赛啦"
+    },
+    {
+      "id": 104,
+      "processSec": 1,
+      "playerName": "王五",
+      "processPer": 1,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 105,
+      "processSec": 2,
+      "playerName": "王五",
+      "processPer": 2,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 106,
+      "processSec": 3,
+      "playerName": "王五",
+      "processPer": 3,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 107,
+      "processSec": 4,
+      "playerName": "王五",
+      "processPer": 4,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 108,
+      "processSec": 5,
+      "playerName": "王五",
+      "processPer": 5,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 109,
+      "processSec": 6,
+      "playerName": "王五",
+      "processPer": 6,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 110,
+      "processSec": 7,
+      "playerName": "王五",
+      "processPer": 7,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 111,
+      "processSec": 8,
+      "playerName": "王五",
+      "processPer": 8,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 112,
+      "processSec": 9,
+      "playerName": "王五",
+      "processPer": 9,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 113,
+      "processSec": 10,
+      "playerName": "王五",
+      "processPer": 10,
+      "processMsg": "我遇到了一条大河，我一个后空翻直接翻了过去"
+    },
+    {
+      "id": 114,
+      "processSec": 11,
+      "playerName": "王五",
+      "processPer": 11,
+      "processMsg": "我准备加速跑步"
+    },
+    {
+      "id": 115,
+      "processSec": 12,
+      "playerName": "王五",
+      "processPer": 14,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 116,
+      "processSec": 13,
+      "playerName": "王五",
+      "processPer": 17,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 117,
+      "processSec": 14,
+      "playerName": "王五",
+      "processPer": 20,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 118,
+      "processSec": 15,
+      "playerName": "王五",
+      "processPer": 23,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 119,
+      "processSec": 16,
+      "playerName": "王五",
+      "processPer": 26,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 120,
+      "processSec": 17,
+      "playerName": "王五",
+      "processPer": 29,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 121,
+      "processSec": 18,
+      "playerName": "王五",
+      "processPer": 32,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 122,
+      "processSec": 19,
+      "playerName": "王五",
+      "processPer": 35,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 123,
+      "processSec": 20,
+      "playerName": "王五",
+      "processPer": 38,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 124,
+      "processSec": 21,
+      "playerName": "王五",
+      "processPer": 41,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 125,
+      "processSec": 22,
+      "playerName": "王五",
+      "processPer": 42,
+      "processMsg": "我有点体力不止，速度满了下来，恢复了正常速度"
+    },
+    {
+      "id": 126,
+      "processSec": 23,
+      "playerName": "王五",
+      "processPer": 43,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 127,
+      "processSec": 24,
+      "playerName": "王五",
+      "processPer": 44,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 128,
+      "processSec": 25,
+      "playerName": "王五",
+      "processPer": 45,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 129,
+      "processSec": 26,
+      "playerName": "王五",
+      "processPer": 46,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 130,
+      "processSec": 27,
+      "playerName": "王五",
+      "processPer": 47,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 131,
+      "processSec": 28,
+      "playerName": "王五",
+      "processPer": 48,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 132,
+      "processSec": 29,
+      "playerName": "王五",
+      "processPer": 49,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 133,
+      "processSec": 30,
+      "playerName": "王五",
+      "processPer": 50,
+      "processMsg": "我发现我居然是最后一名，我准备冲刺"
+    },
+    {
+      "id": 134,
+      "processSec": 31,
+      "playerName": "王五",
+      "processPer": 53,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 135,
+      "processSec": 32,
+      "playerName": "王五",
+      "processPer": 56,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 136,
+      "processSec": 33,
+      "playerName": "王五",
+      "processPer": 59,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 137,
+      "processSec": 34,
+      "playerName": "王五",
+      "processPer": 62,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 138,
+      "processSec": 35,
+      "playerName": "王五",
+      "processPer": 65,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 139,
+      "processSec": 36,
+      "playerName": "王五",
+      "processPer": 68,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 140,
+      "processSec": 37,
+      "playerName": "王五",
+      "processPer": 71,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 141,
+      "processSec": 38,
+      "playerName": "王五",
+      "processPer": 74,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 142,
+      "processSec": 39,
+      "playerName": "王五",
+      "processPer": 77,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 143,
+      "processSec": 40,
+      "playerName": "王五",
+      "processPer": 80,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 144,
+      "processSec": 41,
+      "playerName": "王五",
+      "processPer": 83,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 145,
+      "processSec": 42,
+      "playerName": "王五",
+      "processPer": 86,
+      "processMsg": "加速跑步中"
+    },
+    {
+      "id": 146,
+      "processSec": 43,
+      "playerName": "王五",
+      "processPer": 89,
+      "processMsg": "我有点体力不止，速度满了下来，恢复了正常速度"
+    },
+    {
+      "id": 147,
+      "processSec": 44,
+      "playerName": "王五",
+      "processPer": 90,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 148,
+      "processSec": 45,
+      "playerName": "王五",
+      "processPer": 91,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 149,
+      "processSec": 46,
+      "playerName": "王五",
+      "processPer": 92,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 150,
+      "processSec": 47,
+      "playerName": "王五",
+      "processPer": 93,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 151,
+      "processSec": 48,
+      "playerName": "王五",
+      "processPer": 94,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 152,
+      "processSec": 49,
+      "playerName": "王五",
+      "processPer": 95,
+      "processMsg": "匀速跑步中"
+    },
+    {
+      "id": 153,
+      "processSec": 50,
+      "playerName": "王五",
+      "processPer": 96,
+      "processMsg": "有人已经完成了比赛，我获得了第二名"
+    }
+  ],
+  "mockresult": [
+    {
+      "id": 1,
+      "playerName": "张三",
+      "league": 3,
+      "gameSpeed": 16.2,
+      "gameCommentary": "我叫张三，我参加了由埃森哲举办的浪漫土耳其跑步赛，比赛开始了，在前4秒我保持匀速运动，突然我在途中遇见了老虎/(ㄒoㄒ)/~~，我害怕极了，我开始装死，老虎终于走了，我加速跑了起来。我加速跑了10秒，累的实在跑不动了，开始龟速跑步中，20秒过后，我不累了，速度恢复正常。最终我获得了比赛第三名"
+    },
+    {
+      "id": 2,
+      "playerName": "李四",
+      "league": 1,
+      "gameSpeed": 20,
+      "gameCommentary": "我叫李四，我参加了由埃森哲举办的浪漫土耳其跑步赛，比赛开始了，在前10秒我保持匀速运动，突然我捡到了加速鞋o(*￣▽￣*)ブ，效果持续十秒，我不耗精力地加速跑步中，10秒到了，我又回到了匀速运动。突然我又捡到了黄金，可是我不舍得扔掉，速度减半。我完成了比赛，获得了第一名，还得到了黄金，我真是太棒啦O(∩_∩)O"
+    },
+    {
+      "id": 3,
+      "playerName": "王五",
+      "league": 2,
+      "gameSpeed": 19.2,
+      "gameCommentary": "我叫王五，我参加了由埃森哲举办的浪漫土耳其跑步赛，比赛开始了，在前10秒我保持匀速运动。突然我遇见了一条大河，我遇到了一条大河，我一个后空翻直接翻了过去，我准备加速跑步，10秒钟过去了，我有点体力不止，速度满了下来，恢复了正常速度。我发现我居然是最后一名，我准备冲刺，我一口气加速了12秒，我有点体力不止，速度满了下来，恢复了正常速度。有人已经完成了比赛，我获得了第二名。"
     }
   ]
 }
