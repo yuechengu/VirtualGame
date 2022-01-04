@@ -51,7 +51,7 @@
         <el-col :span="2">
           <i class="el-icon-user-solid" >{{player1Details.playerName}}</i>
         </el-col>
-        <el-col :span="10">
+        <el-col :span="10" align="left">
           <el-progress :percentage="player1Details.processPer" color="#8e71c7"></el-progress>
         </el-col>
         <el-col :span="12" align="left">
@@ -63,7 +63,7 @@
         <el-col :span="2">
           <i class="el-icon-user-solid" >{{player2Details.playerName}}</i>
         </el-col>
-        <el-col :span="10">
+        <el-col :span="10" align="left">
           <el-progress :percentage="player2Details.processPer" color="#6f7ad3"></el-progress>
         </el-col>
         <el-col :span="12" align="left">
@@ -75,7 +75,7 @@
         <el-col :span="2">
           <i class="el-icon-user-solid" >{{player3Details.playerName}}</i>
         </el-col> 
-        <el-col :span="10">
+        <el-col :span="10" align="left">
           <el-progress :percentage="player3Details.processPer" color="#67C23A"></el-progress>
         </el-col>
         <el-col :span="12" align="left">
@@ -204,7 +204,7 @@ export default {
       });
     },
     //获取运动员1的运动细节
-    fetchPlayer1Process(processSec){
+    fetchPlayerProcess(processSec){
       this.$http.get("http://localhost:3000/playerProDetails?playerName=%E5%BC%A0%E4%B8%89&processSec="+processSec)
           .then(function(response){
             this.player1Details = response.body[0];
@@ -227,8 +227,8 @@ export default {
       var timer = setInterval(() => {
         //变量一直++
         progressSecTemp++;
-        this.fetchPlayer1Process(progressSecTemp);
-        //清楚定时器
+        this.fetchPlayerProcess(progressSecTemp);
+        //清除定时器
         if (progressSecTemp >= 50) {
           this.$http.get("http://localhost:3000/mockresult")
           .then(function(response){
