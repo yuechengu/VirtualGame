@@ -41,7 +41,7 @@
       "id": 5
     },
     {
-      "name": "王宝强",
+      "name": "钱七",
       "gender": "女",
       "age": 35,
       "averageSpeed": 30,
@@ -49,26 +49,6 @@
       "gameSpeed": 44,
       "winCount": 0,
       "id": 6
-    },
-    {
-      "name": "测试人员",
-      "gender": "男",
-      "age": 40,
-      "averageSpeed": 30,
-      "addWeight": 10,
-      "gameSpeed": 0,
-      "winCount": 0,
-      "id": 7
-    },
-    {
-      "name": "测试人员2",
-      "gender": "男",
-      "age": 55,
-      "averageSpeed": 20,
-      "addWeight": 10,
-      "gameSpeed": 0,
-      "winCount": 0,
-      "id": 8
     }
   ],
   "map": {

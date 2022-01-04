@@ -76,7 +76,7 @@
           <i class="el-icon-user-solid" >{{player3Details.playerName}}</i>
         </el-col> 
         <el-col :span="10">
-          <el-progress :percentage="player3Details.processPer" color="#6f7ad3"></el-progress>
+          <el-progress :percentage="player3Details.processPer" color="#67C23A"></el-progress>
         </el-col>
         <el-col :span="12" align="left">
           <i class="el-icon-chat-line-square">{{player3Details.processMsg}}</i>
