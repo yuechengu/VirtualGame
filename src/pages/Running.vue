@@ -45,17 +45,28 @@
     <el-button type="info" @click="backToMain()">返回</el-button>
 
     <!-- el-dialog 是弹窗样式，title 绑定弹窗的标题内容，visible 绑定弹窗是否展示 -->
-    <el-dialog :title="dialogtitle" :visible.sync="dialogVisible">
-      <el-divider>显示比赛过程: {{progressSec}}秒</el-divider>
+    <el-dialog
+      width="90%"
+      :show-close="true"
+      :title="dialogtitle" 
+      :visible.sync="dialogVisible" >
+      <el-divider>比赛耗时: {{progressSec}}秒</el-divider>
       <el-row>
-        <el-col :span="2">
+        <el-col :span="2">        
           <i class="el-icon-user-solid" >{{player1Details.playerName}}</i>
         </el-col>
-        <el-col :span="10" align="left">
-          <el-progress :percentage="player1Details.processPer" color="#8e71c7"></el-progress>
+        <el-col :span="18" align="left">
+          <el-progress 
+            :text-inside="true"
+            :stroke-width="26"
+            :percentage="player1Details.processPer" 
+            color="#f56c6c">
+          </el-progress>
         </el-col>
-        <el-col :span="12" align="left">
-          <i class="el-icon-chat-line-square">{{player1Details.processMsg}}</i>
+        <el-col :span="4" align="left">
+          <div class="info-content">
+            <i class="el-icon-chat-line-square">{{player1Details.processMsg}}</i>
+          </div>
         </el-col>
       </el-row>
       <br />
@@ -63,11 +74,18 @@
         <el-col :span="2">
           <i class="el-icon-user-solid" >{{player2Details.playerName}}</i>
         </el-col>
-        <el-col :span="10" align="left">
-          <el-progress :percentage="player2Details.processPer" color="#6f7ad3"></el-progress>
+        <el-col :span="18" align="left">
+          <el-progress 
+            :text-inside="true"
+            :stroke-width="26"
+            :percentage="player2Details.processPer" 
+            color="#6f7ad3">
+          </el-progress>
         </el-col>
-        <el-col :span="12" align="left">
-          <i class="el-icon-chat-line-square">{{player2Details.processMsg}}</i>
+        <el-col :span="4" align="left">
+          <div class="info-content">
+            <i class="el-icon-chat-line-square">{{player2Details.processMsg}}</i>
+          </div>
         </el-col>
       </el-row>
       <br />
@@ -75,18 +93,25 @@
         <el-col :span="2">
           <i class="el-icon-user-solid" >{{player3Details.playerName}}</i>
         </el-col> 
-        <el-col :span="10" align="left">
-          <el-progress :percentage="player3Details.processPer" color="#67C23A"></el-progress>
+        <el-col :span="18" align="left">
+          <el-progress 
+            :text-inside="true"
+            :stroke-width="26"
+            :percentage="player3Details.processPer" 
+            color="#67C23A">
+          </el-progress>
         </el-col>
-        <el-col :span="12" align="left">
-          <i class="el-icon-chat-line-square">{{player3Details.processMsg}}</i>
+        <el-col :span="4" align="left">
+          <div class="info-content">
+            <i class="el-icon-chat-line-square">{{player3Details.processMsg}}</i>
+          </div>
         </el-col>
       </el-row>
       <br />
       <br /><br />
-      <el-button type="primary" @click="clickBtn()" :disabled="processDisplay">显示</el-button>
+      <el-button type="primary" @click="clickBtn()" :disabled="processDisplay">显示比赛过程</el-button>
 
-      <br />
+      <br /><br /><br />
       <el-divider>显示比赛结果</el-divider>
       <el-table
         :data="records"
@@ -95,9 +120,9 @@
         element-loading-spinner="el-icon-loading"
         style="width: 100%"
       >
-        <el-table-column prop="playerName" label="参赛人姓名"> </el-table-column>
-        <el-table-column prop="league" label="排名"> </el-table-column>
-        <el-table-column prop="gameSpeed" label="比赛中速度"> </el-table-column>
+        <el-table-column width="180" prop="playerName" label="参赛人姓名"> </el-table-column>
+        <el-table-column width="180" prop="league" label="排名"> </el-table-column>
+        <el-table-column width="180" prop="gameSpeed" label="比赛中速度"> </el-table-column>
         <el-table-column prop="gameCommentary" label="比赛描述">
         </el-table-column>
       </el-table>
@@ -258,8 +283,32 @@ export default {
   color: #2c3e50;
   float: left;
   position: relative;
-  width: 50%;
-  left: 25%;
+  width: 70%;
+  left: 15%;
   height: 100%;
 }
+
+.info-content{
+  max-width: 70%;
+  padding: 10px;
+  font-size: 14px;
+  float: right;
+  margin-right: 10px;
+  position: relative;
+  margin-top: 8px;
+  background: #dcdfe6;
+  text-align: left;
+  border-radius: 5px;
+}
+        
+.info-content::before{
+  position: absolute;
+  left: -8px;
+  top: 8px;
+  content: '';
+  border-right: 10px solid #dcdfe6;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
 </style>

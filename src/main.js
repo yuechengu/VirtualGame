@@ -12,6 +12,8 @@ import api from './api'
 Vue.prototype.$api = api; 
 //全局样式
 import './assets/css/all.css'
+//图片选框
+import VueSelectImage from 'vue-select-image'
 // 导入element ui布局系统
 import VueResource from 'vue-resource' 
 import ElementUI from 'element-ui'
@@ -20,6 +22,7 @@ import JsonExcel from 'vue-json-excel'
 Vue.use(ElementUI)
 Vue.use(VueResource)
 Vue.use(axios)
+Vue.use(VueSelectImage)
 Vue.config.productionTip = false
 Vue.component('downloadExcel', JsonExcel)
 
