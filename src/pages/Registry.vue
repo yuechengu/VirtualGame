@@ -23,17 +23,17 @@
       <el-form-item label="基础负重" prop="addWeight"
         ><br />
         <el-slider v-model="player.addWeight" :step="10" show-stops> </el-slider>
-      </el-form-item>  
+      </el-form-item>
       <el-form-item label="比赛策略" prop="strategy"
         ><br />
         <vue-select-image v-model="player.strategy"
-          :dataImages="dataImages"
-          :useLabel="true"
-          :h=100
-          :w=100
-          @onselectimage="onSelectImage">
+                          :dataImages="dataImages"
+                          :useLabel="true"
+                          :h=210
+                          :w=210
+                          @onselectimage="onSelectImage">
         </vue-select-image>
-      </el-form-item>  
+      </el-form-item>
     </el-form>
 
     <br /><br />
@@ -109,7 +109,7 @@ export default {
               showClose: true,
               message: "插入信息失败",
               type: "warning",
-            });            
+            });
           }
 
         });
@@ -142,4 +142,5 @@ export default {
   width: 50%;
   left: 25%;
 }
+
 </style>
