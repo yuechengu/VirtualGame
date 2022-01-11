@@ -1,59 +1,59 @@
 <template>
   <div class="playerDetail">
-    <h1>详细信息</h1>   
+    <h1>详细信息</h1>
     <el-row>
       <el-button type="primary" disabled>编辑</el-button>
-      <el-button type="danger" @click="deleteplayer(player.id)">删除</el-button>  
+      <el-button type="danger" @click="deleteplayer(player.id)">删除</el-button>
       <el-button type="info" @click="backToSearch()">返回</el-button>
     </el-row>
     <el-descriptions
       class="margin-top"
       title=" "
-      :column="2"
+      :column="4"
       border
     >
-        <el-descriptions-item>
-        <template slot="label">
+        <el-descriptions-item :span="4">
+        <template slot="label" >
           <i class="el-icon-user"></i>
           选手ID
         </template>
         {{ player.id }}
       </el-descriptions-item>
-      <el-descriptions-item>
+      <el-descriptions-item :span="4">
         <template slot="label">
           <i class="el-icon-user"></i>
           选手名
         </template>
         {{ player.name }}
       </el-descriptions-item>
-      <el-descriptions-item>
+      <el-descriptions-item :span="2">
         <template slot="label">
           <i class="el-icon-male"></i>
           性别
         </template>
         {{ player.gender }}
       </el-descriptions-item>
-      <el-descriptions-item>
+      <el-descriptions-item :span="2">
         <template slot="label">
           <i class="el-icon-watch"></i>
           年龄
         </template>
         {{ player.age }}
       </el-descriptions-item>
-      <el-descriptions-item>
+      <el-descriptions-item :span="2">
         <template slot="label">
           <i class="el-icon-tickets"></i>
           基础速度
         </template>
         {{ player.averageSpeed }}
       </el-descriptions-item>
-      <el-descriptions-item>
+      <el-descriptions-item :span="2">
         <template slot="label">
           <i class="el-icon-s-goods"></i>
           基础负重
         </template>
         {{ player.addedWeight }}
-      </el-descriptions-item> 
+      </el-descriptions-item>
     </el-descriptions><br />
 
     <h1 style="">参赛信息</h1>
@@ -66,10 +66,10 @@
       ><el-button type="success">下载.xls格式到本地</el-button> </download-excel
     ><br />
     <el-table :data="records">
-      <el-table-column prop="dateOfGame" label="比赛时间"> </el-table-column>
-      <el-table-column prop="gameMapName" label="比赛地图"> </el-table-column>
-      <el-table-column prop="league" label="排名"> </el-table-column>
-      <el-table-column prop="gameSpeed" label="比赛速度"> </el-table-column>
+      <el-table-column width="180" prop="dateOfGame" label="比赛时间"> </el-table-column>
+      <el-table-column width="180" prop="gameMapName" label="比赛地图"> </el-table-column>
+      <el-table-column width="180" prop="league" label="排名"> </el-table-column>
+      <el-table-column width="180" prop="gameSpeed" label="比赛速度"> </el-table-column>
       <el-table-column prop="gameCommentary" label="比赛讲解">
       </el-table-column> </el-table
     ><br /><br />
@@ -129,12 +129,12 @@ export default {
           this.$router.push({
             path: "/queryGameScore",
             query: { alert: "选手删除成功" },
-          });          
+          });
         }else{
           this.$router.push({
             path: "/queryGameScore",
             query: { alert: "选手删除失败" },
-          });          
+          });
         }
       });
     },

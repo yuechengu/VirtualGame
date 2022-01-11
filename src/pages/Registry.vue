@@ -6,7 +6,7 @@
         ><br />
         <el-input v-model="player.name"></el-input>
       </el-form-item>
-      <el-form-item label="性别" prop="name">
+      <el-form-item label="性别" prop="age">
         <el-radio-group v-model="player.gender">
           <el-radio label="男"></el-radio>
           <el-radio label="女"></el-radio>
@@ -23,7 +23,17 @@
       <el-form-item label="基础负重" prop="addWeight"
         ><br />
         <el-slider v-model="player.addWeight" :step="10" show-stops> </el-slider>
-      </el-form-item>  
+      </el-form-item>
+      <el-form-item label="比赛策略" prop="strategy"
+        ><br />
+        <vue-select-image v-model="player.strategy"
+                          :dataImages="dataImages"
+                          :useLabel="true"
+                          :h=210
+                          :w=210
+                          @onselectimage="onSelectImage">
+        </vue-select-image>
+      </el-form-item>
     </el-form>
 
     <br /><br />
@@ -34,10 +44,25 @@
 </template>
 
 <script>
+require('vue-select-image/dist/vue-select-image.css')
+
 export default {
   name: "player",
   data() {
     return {
+      dataImages: [{
+        id: '1',
+        src: 'https://cdn-icons-png.flaticon.com/512/5512/5512542.png',
+        alt: '冲刺型'
+      }, {
+        id: '2',
+        src: 'https://cdn-icons-png.flaticon.com/512/2367/2367692.png',
+        alt: '体力型'
+      }, {
+        id: '3',
+        src: 'https://cdn-icons.flaticon.com/png/512/4418/premium/4418018.png?token=exp=1641372787~hmac=7a2d60c646138de17a23ac56d571fe55',
+        alt: '耐力型'
+      }],
       player: {
         name: "",
         gender: "",
@@ -46,6 +71,7 @@ export default {
         addWeight: 0,
         gameSpeed: 0,
         winCount: 0,
+        strategy: 0
       },
       alert: "",
     };
@@ -83,7 +109,7 @@ export default {
               showClose: true,
               message: "插入信息失败",
               type: "warning",
-            });            
+            });
           }
 
         });
@@ -116,4 +142,5 @@ export default {
   width: 50%;
   left: 25%;
 }
+
 </style>
